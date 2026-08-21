@@ -89,7 +89,6 @@
     line-height: 1.7;
   }
 
-
   /* ========================================
      NAVIGATION
   ======================================== */
@@ -204,7 +203,6 @@
     cursor: pointer;
   }
 
-
   /* ========================================
      HERO
   ======================================== */
@@ -283,7 +281,6 @@
     background: var(--green-light);
   }
 
-
   /* ========================================
      PROBLEM
   ======================================== */
@@ -318,7 +315,6 @@
     font-style: italic;
     margin-top: 4px;
   }
-
 
   /* ========================================
      HEART
@@ -411,7 +407,6 @@
     color: #999;
   }
 
-
   /* ========================================
      GROWLOOP
   ======================================== */
@@ -494,7 +489,6 @@
     color: var(--green-mid);
   }
 
-
   /* ========================================
      COMPARISON
   ======================================== */
@@ -558,7 +552,6 @@
     margin-bottom: 4px;
   }
 
-
   /* ========================================
      PILLARS
   ======================================== */
@@ -610,7 +603,6 @@
     color: #555;
     line-height: 1.75;
   }
-
 
   /* ========================================
      TIERS
@@ -678,7 +670,6 @@
     color: rgba(255,255,255,0.75);
     line-height: 1.7;
   }
-
 
   /* ========================================
      SOCIAL PROOF
@@ -760,7 +751,6 @@
     margin-top: 16px;
   }
 
-
   /* ========================================
      CTA
   ======================================== */
@@ -826,7 +816,6 @@
     margin-top: 14px;
   }
 
-
   /* ========================================
      FOOTER
   ======================================== */
@@ -844,57 +833,13 @@
   }
 
 
-  /* ===================================================
-     COMPACT DESKTOP HEADER
+  /* ========================================
+     HAMBURGER BREAKPOINT
 
-     Between 721px and 900px we keep the normal header,
-     but make it a little tighter so nothing wraps.
-  =================================================== */
-
-  @media (min-width: 721px) and (max-width: 900px) {
-
-    nav {
-      padding: 0 18px;
-    }
-
-    .nav-inner {
-      height: 60px;
-    }
-
-    .nav-logo {
-      font-size: 18px;
-    }
-
-    .nav-tagline {
-      font-size: 9px;
-      letter-spacing: 0.035em;
-    }
-
-    .nav-links {
-      gap: 13px;
-    }
-
-    .nav-links a.nav-text {
-      font-size: 12px;
-    }
-
-    .btn-apply {
-      font-size: 12px;
-      padding: 7px 13px;
-    }
-
-    .btn-member {
-      font-size: 12px;
-      padding: 6px 11px;
-    }
-  }
-
-
-  /* ===================================================
-     HAMBURGER
-
-     We now wait until 720px before switching.
-  =================================================== */
+     No shrinking.
+     Full desktop header until 720px.
+     Then direct switch to hamburger.
+  ======================================== */
 
   @media (max-width: 720px) {
 
@@ -916,19 +861,13 @@
       top: 64px;
       left: -20px;
       right: -20px;
-
       background: #fff;
-
       flex-direction: column;
       align-items: stretch;
       gap: 0;
-
       padding: 14px 20px 24px;
-
       border-bottom: 1px solid var(--green-border);
-
-      box-shadow:
-        0 8px 20px rgba(0,0,0,0.08);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     }
 
     .nav-links.open {
@@ -996,7 +935,6 @@
     }
   }
 
-
   /* ========================================
      SMALL PHONES
   ======================================== */
@@ -1035,7 +973,6 @@
 
 <body>
 
-
 <!-- NAVIGATION -->
 
 <nav>
@@ -1055,7 +992,6 @@
       </div>
     </a>
 
-
     <button
       class="menu-toggle"
       aria-label="Open navigation menu"
@@ -1065,44 +1001,28 @@
       ☰
     </button>
 
-
     <div
       class="nav-links"
       id="main-navigation"
     >
 
-      <a
-        href="about.html"
-        class="nav-text"
-      >
+      <a href="about.html" class="nav-text">
         About Us
       </a>
 
-      <a
-        href="heart.html"
-        class="nav-text"
-      >
+      <a href="heart.html" class="nav-text">
         About HEART™
       </a>
 
-      <a
-        href="program.html"
-        class="nav-text"
-      >
+      <a href="program.html" class="nav-text">
         The Program
       </a>
 
-      <a
-        href="#"
-        class="btn-apply"
-      >
+      <a href="#" class="btn-apply">
         Apply Now →
       </a>
 
-      <a
-        href="#"
-        class="btn-member"
-      >
+      <a href="#" class="btn-member">
         Member Login
       </a>
 
@@ -1142,17 +1062,11 @@
 
     <div class="hero-btns">
 
-      <a
-        href="#"
-        class="btn-primary"
-      >
+      <a href="#" class="btn-primary">
         Apply Now — Limited Spots
       </a>
 
-      <a
-        href="program.html"
-        class="btn-secondary"
-      >
+      <a href="program.html" class="btn-secondary">
         Learn More
       </a>
 
@@ -1171,10 +1085,7 @@
 
     <div class="problem-text">
 
-      <div
-        class="section-eyebrow"
-        style="text-align:center;"
-      >
+      <div class="section-eyebrow" style="text-align:center;">
         The Problem We Solve
       </div>
 
@@ -1244,22 +1155,12 @@
 
     </div>
 
-
     <div class="heart-grid">
-
-
-      <!-- H -->
 
       <div class="heart-card">
 
-        <div
-          class="heart-top"
-          style="background:#E8F4FD;"
-        >
-          <div
-            class="heart-badge"
-            style="background:#2E86C1;"
-          >
+        <div class="heart-top" style="background:#E8F4FD;">
+          <div class="heart-badge" style="background:#2E86C1;">
             H
           </div>
         </div>
@@ -1271,27 +1172,16 @@
           </div>
 
           <div class="heart-def">
-
-            Actively building connections,
-            taking on roles,
-            reading others,
-            navigating disagreement,
-            holding collective responsibility,
+            Actively building connections, taking on roles, reading others,
+            navigating disagreement, holding collective responsibility,
             and moving the team forward.
-
           </div>
 
           <div class="heart-hr"></div>
 
-          <div
-            class="heart-ai"
-            style="color:#1A5276;"
-          >
-
-            Children who can build trust and lead people
-            will know how to direct AI toward meaningful goals —
-            and bring others with them.
-
+          <div class="heart-ai" style="color:#1A5276;">
+            Children who can build trust and lead people will know how to
+            direct AI toward meaningful goals — and bring others with them.
           </div>
 
         </div>
@@ -1299,18 +1189,10 @@
       </div>
 
 
-      <!-- E -->
-
       <div class="heart-card">
 
-        <div
-          class="heart-top"
-          style="background:#FEF3E2;"
-        >
-          <div
-            class="heart-badge"
-            style="background:#E8871A;"
-          >
+        <div class="heart-top" style="background:#FEF3E2;">
+          <div class="heart-badge" style="background:#E8871A;">
             E
           </div>
         </div>
@@ -1322,26 +1204,16 @@
           </div>
 
           <div class="heart-def">
-
-            Expressing ideas clearly,
-            understanding others accurately,
-            seeking clarification proactively,
-            responding effectively,
+            Expressing ideas clearly, understanding others accurately,
+            seeking clarification proactively, responding effectively,
             and adjusting style for different people and contexts.
-
           </div>
 
           <div class="heart-hr"></div>
 
-          <div
-            class="heart-ai"
-            style="color:#7D4E00;"
-          >
-
+          <div class="heart-ai" style="color:#7D4E00;">
             Children who can communicate with clarity and intention
-            will use AI to amplify their voice —
-            not be replaced by it.
-
+            will use AI to amplify their voice — not be replaced by it.
           </div>
 
         </div>
@@ -1349,18 +1221,10 @@
       </div>
 
 
-      <!-- A -->
-
       <div class="heart-card">
 
-        <div
-          class="heart-top"
-          style="background:#E1F5EE;"
-        >
-          <div
-            class="heart-badge"
-            style="background:#1D9E75;"
-          >
+        <div class="heart-top" style="background:#E1F5EE;">
+          <div class="heart-badge" style="background:#1D9E75;">
             A
           </div>
         </div>
@@ -1372,29 +1236,17 @@
           </div>
 
           <div class="heart-def">
-
-            Turning goals into action:
-            initiating,
-            defining the problem,
-            planning a path,
-            following through,
-            iterating,
+            Turning goals into action: initiating, defining the problem,
+            planning a path, following through, iterating,
             and taking ownership of outcomes.
-
           </div>
 
           <div class="heart-hr"></div>
 
-          <div
-            class="heart-ai"
-            style="color:#0F6E56;"
-          >
-
+          <div class="heart-ai" style="color:#0F6E56;">
             Children who can define real problems and own outcomes
-            will put AI to work —
-            as a tool in their hands,
+            will put AI to work — as a tool in their hands,
             not a force beyond their control.
-
           </div>
 
         </div>
@@ -1402,18 +1254,10 @@
       </div>
 
 
-      <!-- R -->
-
       <div class="heart-card">
 
-        <div
-          class="heart-top"
-          style="background:#F0EEFF;"
-        >
-          <div
-            class="heart-badge"
-            style="background:#7B5EA7;"
-          >
+        <div class="heart-top" style="background:#F0EEFF;">
+          <div class="heart-badge" style="background:#7B5EA7;">
             R
           </div>
         </div>
@@ -1425,26 +1269,17 @@
           </div>
 
           <div class="heart-def">
-
-            Regulating emotions under pressure,
-            maintaining stability through difficulty,
-            recovering from setbacks,
-            and developing increasingly mature self-management habits.
-
+            Regulating emotions under pressure, maintaining stability through
+            difficulty, recovering from setbacks, and developing increasingly
+            mature self-management habits.
           </div>
 
           <div class="heart-hr"></div>
 
-          <div
-            class="heart-ai"
-            style="color:#4A2D82;"
-          >
-
-            Children who can adapt and recover
-            will meet every new wave of AI with confidence —
-            each change becomes an opportunity,
+          <div class="heart-ai" style="color:#4A2D82;">
+            Children who can adapt and recover will meet every new wave of AI
+            with confidence — each change becomes an opportunity,
             not a threat.
-
           </div>
 
         </div>
@@ -1452,18 +1287,10 @@
       </div>
 
 
-      <!-- T -->
-
       <div class="heart-card">
 
-        <div
-          class="heart-top"
-          style="background:#FFF0ED;"
-        >
-          <div
-            class="heart-badge"
-            style="background:#E05C3A;"
-          >
+        <div class="heart-top" style="background:#FFF0ED;">
+          <div class="heart-badge" style="background:#E05C3A;">
             T
           </div>
         </div>
@@ -1475,28 +1302,18 @@
           </div>
 
           <div class="heart-def">
-
-            Asking meaningful questions,
-            making reasoned judgments,
-            applying logical thinking,
-            shifting perspectives,
-            generating original ideas,
-            and synthesizing different viewpoints into something new.
-
+            Asking meaningful questions, making reasoned judgments,
+            applying logical thinking, shifting perspectives,
+            generating original ideas, and synthesizing different viewpoints
+            into something new.
           </div>
 
           <div class="heart-hr"></div>
 
-          <div
-            class="heart-ai"
-            style="color:#8B2500;"
-          >
-
-            Children who can ask the right questions
-            and think independently will direct AI,
-            evaluate its output,
+          <div class="heart-ai" style="color:#8B2500;">
+            Children who can ask the right questions and think independently
+            will direct AI, evaluate its output,
             and go further than it ever could alone.
-
           </div>
 
         </div>
@@ -1509,23 +1326,19 @@
     <div class="heart-closing">
 
       <p>
-
         Children with HEART™ won't be displaced by AI —
         because these five irreplaceable competencies give them
         the confidence and capability to lead it,
         and use it on their own terms.
-
       </p>
 
     </div>
 
 
     <div class="heart-footer">
-
       Five competencies ·
       30 developmental indicators ·
       Assessed through real behavioral observation — not tests
-
     </div>
 
   </div>
@@ -1554,139 +1367,67 @@
 
     <div class="gl-steps">
 
-
       <div class="gl-step">
-
-        <div class="gl-num">
-          ①
-        </div>
-
-        <div class="gl-name">
-          Inquire
-        </div>
-
+        <div class="gl-num">①</div>
+        <div class="gl-name">Inquire</div>
         <div class="gl-line"></div>
-
         <div class="gl-desc">
-
           Ask a real question worth thinking hard about,
           and go find the answer yourself.
-
         </div>
-
       </div>
 
-
       <div class="gl-step">
-
-        <div class="gl-num">
-          ②
-        </div>
-
-        <div class="gl-name">
-          Design
-        </div>
-
+        <div class="gl-num">②</div>
+        <div class="gl-name">Design</div>
         <div class="gl-line"></div>
-
         <div class="gl-desc">
-
           Choose how to present what you discover,
           then make a plan and own it.
-
         </div>
-
       </div>
 
-
       <div class="gl-step">
-
-        <div class="gl-num">
-          ③
-        </div>
-
-        <div class="gl-name">
-          Create
-        </div>
-
+        <div class="gl-num">③</div>
+        <div class="gl-name">Create</div>
         <div class="gl-line"></div>
-
         <div class="gl-desc">
-
           Build something real —
           and learn that the first idea
           is just the beginning.
-
         </div>
-
       </div>
 
-
       <div class="gl-step">
-
-        <div class="gl-num">
-          ④
-        </div>
-
-        <div class="gl-name">
-          Revise
-        </div>
-
+        <div class="gl-num">④</div>
+        <div class="gl-name">Revise</div>
         <div class="gl-line"></div>
-
         <div class="gl-desc">
-
           Bring your work to the group,
           hear honest feedback,
           and make it better.
-
         </div>
-
       </div>
 
-
       <div class="gl-step">
-
-        <div class="gl-num">
-          ⑤
-        </div>
-
-        <div class="gl-name">
-          Present
-        </div>
-
+        <div class="gl-num">⑤</div>
+        <div class="gl-name">Present</div>
         <div class="gl-line"></div>
-
         <div class="gl-desc">
-
           Share your finished work with peers and family —
           and field real questions from a real audience.
-
         </div>
-
       </div>
 
-
       <div class="gl-step">
-
-        <div class="gl-num">
-          ⑥
-        </div>
-
-        <div class="gl-name">
-          Reflect
-        </div>
-
+        <div class="gl-num">⑥</div>
+        <div class="gl-name">Reflect</div>
         <div class="gl-line"></div>
-
         <div class="gl-desc">
-
           Extract what you learned from the experience —
           not just what you made,
           but who you became.
-
         </div>
-
       </div>
 
     </div>
@@ -1734,25 +1475,14 @@
 
         <tr>
 
-          <th
-            class="col-label"
-            style="width:18%;"
-          >
-          </th>
+          <th class="col-label" style="width:18%;"></th>
 
-          <th
-            class="col-gm"
-            style="width:22%;"
-          >
-
+          <th class="col-gm" style="width:22%;">
             <div class="diff-badge">
               GrowMate™
             </div>
-
             <br>
-
             HEART PBL Program
-
           </th>
 
           <th class="col-other">
@@ -1903,7 +1633,6 @@
 
     <div class="pillars-grid">
 
-
       <div class="pillar-card">
 
         <div class="pillar-icon">
@@ -1917,17 +1646,14 @@
         <div class="pillar-hr"></div>
 
         <div class="pillar-desc">
-
           One real driving question each month.
           Children explore a genuine topic,
           move through the full GrowLoop™ cycle,
           and turn their thinking into a finished piece of work.
-
           No single right answer —
           just real choices,
           real challenges,
           and real results.
-
         </div>
 
       </div>
@@ -1946,17 +1672,14 @@
         <div class="pillar-hr"></div>
 
         <div class="pillar-desc">
-
           Each child belongs to a group of four same-age peers.
           They share progress,
           present work,
           and respond to each other at the Monthly Showcase.
-
           Peers are not competitors —
           they are witnesses,
           motivators,
           and genuine collaborators.
-
         </div>
 
       </div>
@@ -1975,20 +1698,15 @@
         <div class="pillar-hr"></div>
 
         <div class="pillar-desc">
-
           GrowMate™ mentors don't lecture.
-
           They accompany children through discovery,
           creation,
           and reflection —
           asking the right questions,
           offering encouragement,
           guiding the debrief.
-
           They never do the work for the child.
-
           They help the child grow into their own capability.
-
         </div>
 
       </div>
@@ -2021,7 +1739,6 @@
 
     <div class="tiers-grid">
 
-
       <div class="tier-card">
 
         <div class="tier-icon">
@@ -2039,16 +1756,12 @@
         <div class="tier-hr"></div>
 
         <div class="tier-desc">
-
           Curious and hands-on —
           children this age learn through doing.
-
           Projects are grounded in everyday life,
           with clear steps and room to discover.
-
           Mentors provide warm guidance while leaving plenty
           of space for each child's own ideas.
-
         </div>
 
       </div>
@@ -2071,16 +1784,12 @@
         <div class="tier-hr"></div>
 
         <div class="tier-desc">
-
           Ready to build something real —
           this age group cares about impact
           and wants to be taken seriously.
-
           Projects move into the community and beyond,
           with real audiences and genuine stakes.
-
           Mentors shift into a coaching role.
-
         </div>
 
       </div>
@@ -2103,17 +1812,13 @@
         <div class="tier-hr"></div>
 
         <div class="tier-desc">
-
           Ready to engage with the world —
           with conviction,
           empathy,
           and the ability to take on real responsibility.
-
           Projects tackle city-scale and global issues.
-
           Mentors step back as advisors,
           handing full ownership to the child.
-
         </div>
 
       </div>
@@ -2146,7 +1851,6 @@
 
     <div class="sp-grid">
 
-
       <div class="sp-card">
 
         <div class="sp-quote-mark">
@@ -2154,16 +1858,12 @@
         </div>
 
         <div class="sp-quote">
-
           I was honestly skeptical at first —
           my daughter already has a full schedule.
-
           But after the first month,
           she started asking questions about things
           I'd never heard her wonder about before.
-
           That felt different.
-
         </div>
 
         <div class="sp-hr"></div>
@@ -2198,16 +1898,12 @@
         </div>
 
         <div class="sp-quote">
-
           What surprised me most was watching him present
           at the Showcase.
-
           He was nervous,
           but he stood up there and explained his whole project.
-
           I didn't know he could do that.
           Neither did he.
-
         </div>
 
         <div class="sp-hr"></div>
@@ -2242,15 +1938,11 @@
         </div>
 
         <div class="sp-quote">
-
           The HEART™ Growth Report is unlike anything
           I've received from a school or program.
-
           It's specific —
           real examples of what my son actually did and said.
-
           That's what I needed to see.
-
         </div>
 
         <div class="sp-hr"></div>
@@ -2281,10 +1973,8 @@
 
 
     <div class="sp-note">
-
       * Placeholder quotes for design purposes —
       to be replaced with real parent testimonials before launch
-
     </div>
 
   </div>
@@ -2303,36 +1993,26 @@
     </div>
 
     <h2 class="cta-headline">
-
       32 children. 8 groups.
       <br>
       One chance to be part of the beginning.
-
     </h2>
 
     <p class="cta-body">
-
       GrowMate™ Phase 1 is recruiting a small,
       carefully matched founding cohort.
-
       We're looking for families who believe in the long game —
       parents ready to invest in who their child is becoming,
       not just what they're scoring.
-
     </p>
 
-    <a
-      href="#"
-      class="cta-btn"
-    >
+    <a href="#" class="cta-btn">
       Apply Now →
     </a>
 
     <p class="cta-note">
-
       Takes 3 minutes ·
       We'll follow up within 2 business days
-
     </p>
 
   </div>
@@ -2345,17 +2025,13 @@
 <footer>
 
   <p>
-
     © 2026 GrowMate™.
     All rights reserved.
     · Lead the AI Era with HEART™
-
   </p>
 
 </footer>
 
-
-<!-- MOBILE MENU -->
 
 <script>
 
@@ -2377,7 +2053,6 @@
         'aria-expanded',
         isOpen
       );
-
 
       if (isOpen) {
 
