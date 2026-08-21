@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GrowMate™ — Lead the AI Era with HEART™</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 16px; scroll-behavior: smooth; }
+  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #2C2C2A; background: #fff; line-height: 1.6; }
+  :root {
+    --green-dark: #27500A; --green-mid: #3B6D11; --green-light: #EAF3DE;
+    --green-border: #C0DD97; --text-dark: #2C2C2A; --gray-bg: #F7F7F5;
+  }
+  h1, h2, h3 { line-height: 1.25; font-weight: 700; }
+  .container { max-width: 1080px; margin: 0 auto; padding: 0 40px; }
+  section { padding: 80px 0; }
+  .section-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green-mid); margin-bottom: 12px; }
+  .section-header { text-align: center; margin-bottom: 48px; }
+  .section-header h2 { font-size: 32px; color: var(--green-dark); margin-bottom: 12px; }
+  .section-header p { font-size: 16px; color: #666; max-width: 560px; margin: 0 auto; line-height: 1.7; }
+
+  /* NAV */
+  nav { background: #fff; border-bottom: 1px solid var(--green-border); padding: 0 40px; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1080px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .nav-brand { display: flex; flex-direction: column; }
+  .nav-logo { font-size: 20px; font-weight: 700; color: var(--green-dark); }
+  .nav-logo span { color: var(--green-mid); }
+  .nav-tagline { font-size: 11px; color: var(--green-mid); font-weight: 500; letter-spacing: 0.05em; margin-top: 1px; }
+  .nav-links { display: flex; align-items: center; gap: 28px; }
+  .nav-links a.nav-text { font-size: 14px; color: var(--text-dark); text-decoration: none; font-weight: 500; }
+  .nav-links a.nav-text:hover { color: var(--green-mid); }
+  .btn-apply { background: var(--green-mid); color: #fff; padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; }
+  .btn-apply:hover { background: var(--green-dark); }
+  .btn-member { border: 1.5px solid #ccc; color: #666; padding: 7px 16px; border-radius: 6px; font-size: 13px; font-weight: 500; text-decoration: none; }
+  .btn-member:hover { border-color: var(--green-mid); color: var(--green-mid); }
+
+  /* HERO */
+  .hero { background: linear-gradient(155deg, #fff 55%, var(--green-light) 100%); padding: 100px 0 80px; }
+  .hero-sub-tag { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--green-mid); margin-bottom: 20px; }
+  .hero-headline { font-size: 58px; font-weight: 700; color: var(--green-dark); line-height: 1.1; margin-bottom: 20px; letter-spacing: -1.5px; }
+  .hero-oneliner { font-size: 17px; color: #444; line-height: 1.8; max-width: 660px; margin-bottom: 36px; }
+  .hero-oneliner strong { color: var(--green-dark); }
+  .hero-btns { display: flex; gap: 14px; }
+  .btn-primary { background: var(--green-mid); color: #fff; padding: 14px 28px; border-radius: 8px; font-size: 15px; font-weight: 600; text-decoration: none; }
+  .btn-primary:hover { background: var(--green-dark); }
+  .btn-secondary { background: transparent; color: var(--green-mid); border: 1.5px solid var(--green-mid); padding: 13px 28px; border-radius: 8px; font-size: 15px; font-weight: 600; text-decoration: none; }
+  .btn-secondary:hover { background: var(--green-light); }
+
+  /* PROBLEM */
+  .problem-wrap { background: var(--gray-bg); }
+  .problem-text { max-width: 700px; margin: 0 auto; text-align: center; }
+  .problem-text p { font-size: 17px; line-height: 1.85; color: #444; margin-bottom: 18px; }
+  .problem-highlight { font-size: 18px; color: var(--text-dark); font-weight: 500; line-height: 1.8; }
+  .problem-closing { font-size: 15px; color: var(--green-mid); font-style: italic; margin-top: 4px; }
+
+  /* HEART */
+  .heart-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 24px; }
+  .heart-card { border-radius: 14px; border: 0.5px solid #e0e0dd; overflow: hidden; background: #fff; }
+  .heart-top { height: 76px; display: flex; align-items: center; justify-content: center; }
+  .heart-badge { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-size: 22px; font-weight: 700; color: #fff; }
+  .heart-body { padding: 14px 12px 16px; }
+  .heart-name { font-size: 12px; font-weight: 600; color: var(--text-dark); text-align: center; margin-bottom: 8px; line-height: 1.3; }
+  .heart-def { font-size: 10.5px; color: #555; line-height: 1.6; margin-bottom: 10px; }
+  .heart-hr { border: none; border-top: 0.5px solid #eee; margin-bottom: 10px; }
+  .heart-ai { font-size: 10.5px; line-height: 1.6; font-style: italic; }
+  .heart-closing { background: var(--green-light); border-left: 3px solid var(--green-mid); border-radius: 0 10px 10px 0; padding: 14px 18px; margin-bottom: 14px; }
+  .heart-closing p { font-size: 14px; font-weight: 600; color: var(--green-dark); line-height: 1.65; }
+  .heart-footer { text-align: center; font-size: 12px; color: #999; }
+
+  /* GROWLOOP */
+  .gl-wrap { background: var(--gray-bg); }
+  .gl-steps { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0; margin-bottom: 20px; }
+  .gl-step { display: flex; flex-direction: column; align-items: center; position: relative; }
+  .gl-step:not(:last-child)::after { content: '→'; position: absolute; right: -10px; top: 24px; font-size: 16px; color: var(--green-border); z-index: 1; }
+  .gl-num { width: 48px; height: 48px; border-radius: 50%; background: var(--green-mid); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 500; margin-bottom: 10px; }
+  .gl-name { font-size: 13px; font-weight: 600; color: var(--green-dark); text-align: center; margin-bottom: 4px; }
+  .gl-line { width: 1px; height: 12px; background: var(--green-border); margin: 0 auto 10px; }
+  .gl-desc { font-size: 10.5px; color: #555; text-align: center; line-height: 1.6; padding: 0 4px; }
+  .gl-cadence { text-align: center; font-size: 13px; color: #777; padding: 14px 0; border-top: 0.5px solid #e0e0dd; margin-top: 8px; }
+  .gl-cadence strong { color: var(--green-mid); }
+
+  /* DIFFERENT */
+  .diff-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .diff-table th, .diff-table td { padding: 12px 14px; text-align: left; border: 0.5px solid #e0e0dd; vertical-align: top; line-height: 1.55; }
+  .diff-table thead th.col-gm { background: var(--green-mid); color: #fff; font-weight: 600; }
+  .diff-table thead th.col-other { background: #f0f0ee; color: #555; font-weight: 600; font-size: 12px; }
+  .diff-table thead th.col-label { background: #f0f0ee; }
+  .diff-table tbody tr:nth-child(even) td { background: #fafaf8; }
+  .diff-table td.row-label { font-weight: 600; font-size: 11px; color: #666; background: #f5f5f3 !important; }
+  .diff-table td.col-gm { background: var(--green-light) !important; color: var(--green-dark); font-weight: 600; }
+  .diff-badge { display: inline-block; background: var(--green-mid); color: #fff; font-size: 10px; padding: 2px 8px; border-radius: 20px; margin-bottom: 4px; }
+
+  /* PILLARS */
+  .pillars-wrap { background: var(--gray-bg); }
+  .pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .pillar-card { border-radius: 14px; border: 0.5px solid #e0e0dd; background: #fff; padding: 28px 24px; }
+  .pillar-icon { width: 52px; height: 52px; border-radius: 12px; background: var(--green-light); display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+  .pillar-name { font-size: 16px; font-weight: 700; color: var(--green-dark); margin-bottom: 12px; }
+  .pillar-hr { border: none; border-top: 0.5px solid #eee; margin-bottom: 12px; }
+  .pillar-desc { font-size: 13px; color: #555; line-height: 1.75; }
+
+  /* AGE TIERS */
+  .tiers-wrap { background: var(--green-dark); padding: 64px 0; }
+  .tiers-header { text-align: center; margin-bottom: 36px; }
+  .tiers-header .section-eyebrow { color: var(--green-border); }
+  .tiers-header h2 { font-size: 28px; color: #fff; }
+  .tiers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .tier-card { background: rgba(255,255,255,0.07); border: 0.5px solid rgba(192,221,151,0.3); border-radius: 14px; padding: 24px 20px; }
+  .tier-icon { font-size: 28px; margin-bottom: 12px; }
+  .tier-name { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+  .tier-age { font-size: 12px; color: var(--green-border); font-weight: 500; margin-bottom: 12px; }
+  .tier-hr { border: none; border-top: 0.5px solid rgba(192,221,151,0.25); margin-bottom: 12px; }
+  .tier-desc { font-size: 12.5px; color: rgba(255,255,255,0.75); line-height: 1.7; }
+
+  /* SOCIAL PROOF */
+  .sp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .sp-card { border-radius: 14px; border: 0.5px solid #e0e0dd; background: #fff; padding: 24px; display: flex; flex-direction: column; gap: 16px; }
+  .sp-quote-mark { font-size: 36px; line-height: 1; color: var(--green-border); font-family: Georgia, serif; margin-bottom: -10px; }
+  .sp-quote { font-size: 13px; color: var(--text-dark); line-height: 1.8; font-style: italic; flex: 1; }
+  .sp-hr { border: none; border-top: 0.5px solid #eee; }
+  .sp-author { display: flex; align-items: center; gap: 12px; }
+  .sp-avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--green-light); display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; color: var(--green-mid); flex-shrink: 0; }
+  .sp-name { font-size: 13px; font-weight: 600; color: var(--text-dark); }
+  .sp-desc-text { font-size: 11px; color: #999; }
+  .sp-note { text-align: center; font-size: 11px; color: #bbb; font-style: italic; margin-top: 16px; }
+
+  /* CTA */
+  .cta-wrap { background: var(--green-dark); padding: 90px 0; }
+  .cta-inner { max-width: 620px; margin: 0 auto; padding: 0 40px; text-align: center; }
+  .cta-badge { display: inline-block; background: var(--green-mid); color: var(--green-border); font-size: 11px; font-weight: 600; padding: 5px 16px; border-radius: 20px; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 20px; }
+  .cta-headline { font-size: 34px; font-weight: 700; color: #fff; line-height: 1.3; margin-bottom: 16px; }
+  .cta-body { font-size: 15px; color: var(--green-border); line-height: 1.85; margin-bottom: 32px; }
+  .cta-btn { display: inline-block; background: var(--green-light); color: var(--green-dark); font-size: 16px; font-weight: 700; padding: 14px 36px; border-radius: 8px; text-decoration: none; }
+  .cta-btn:hover { background: #fff; }
+  .cta-note { font-size: 12px; color: #97C459; margin-top: 14px; }
+
+  /* FOOTER */
+  footer { background: #1a3a05; border-top: 1px solid #0f2203; padding: 28px 40px; text-align: center; }
+  footer p { font-size: 13px; color: #97C459; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <div class="nav-logo">Grow<span>Mate</span>™</div>
+      <div class="nav-tagline">Lead the AI Era with HEART™</div>
+    </div>
+    <div class="nav-links">
+      <a href="#" class="nav-text">About Us</a>
+      <a href="#" class="nav-text">About HEART™</a>
+      <a href="#" class="nav-text">The Program</a>
+      <a href="#" class="btn-apply">Apply Now →</a>
+      <a href="#" class="btn-member">Member Login</a>
+    </div>
+  </div>
+</nav>
+
+<!-- 01 HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-sub-tag">Lead the AI Era with HEART™</div>
+    <h1 class="hero-headline">The Power to Define<br>the Future</h1>
+    <p class="hero-oneliner">GrowMate™ prepares children ages 6–17 for an AI-driven world — not by teaching more content, but by building the <strong>five human core competencies irreplaceable in the age of AI</strong>, through real projects, peer groups, and role model mentors.</p>
+    <div class="hero-btns">
+      <a href="#" class="btn-primary">Apply Now — Limited Spots</a>
+      <a href="#" class="btn-secondary">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<!-- 02 PROBLEM -->
+<section class="problem-wrap">
+  <div class="container">
+    <div class="problem-text">
+      <div class="section-eyebrow" style="text-align:center;">The Problem We Solve</div>
+      <p>Could you have imagined three years ago how fast AI would move?<br>What will it look like in five years? In ten? When your child is grown?</p>
+      <p>Most parents instinctively chase what's trending — coding, AI classes, STEM programs. But what's easy to overlook is that trends are exactly what changes fastest. What's essential today may be irrelevant tomorrow.</p>
+      <p class="problem-highlight">There is one answer that doesn't change with the times: children who can think critically, learn how to learn, communicate, and collaborate with others will thrive in any future — because these are the <strong>Human Core Competencies</strong> no technology will ever replace.</p>
+      <p class="problem-closing">That's what GrowMate™ is dedicated to building — the foundational abilities that shape who your child becomes for life.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 03 HEART -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">The HEART™ Framework</div>
+      <h2>Five Human Core Competencies</h2>
+    </div>
+    <div class="heart-grid">
+      <div class="heart-card">
+        <div class="heart-top" style="background:#E8F4FD;"><div class="heart-badge" style="background:#2E86C1;">H</div></div>
+        <div class="heart-body">
+          <div class="heart-name">Human Collaboration</div>
+          <div class="heart-def">Actively building connections, taking on roles, reading others, navigating disagreement, holding collective responsibility, and moving the team forward.</div>
+          <div class="heart-hr"></div>
+          <div class="heart-ai" style="color:#1A5276;">Children who can build trust and lead people will know how to direct AI toward meaningful goals — and bring others with them.</div>
+        </div>
+      </div>
+      <div class="heart-card">
+        <div class="heart-top" style="background:#FEF3E2;"><div class="heart-badge" style="background:#E8871A;">E</div></div>
+        <div class="heart-body">
+          <div class="heart-name">Expression & Communication</div>
+          <div class="heart-def">Expressing ideas clearly, understanding others accurately, seeking clarification proactively, responding effectively, and adjusting style for different people and contexts.</div>
+          <div class="heart-hr"></div>
+          <div class="heart-ai" style="color:#7D4E00;">Children who can communicate with clarity and intention will use AI to amplify their voice — not be replaced by it.</div>
+        </div>
+      </div>
+      <div class="heart-card">
+        <div class="heart-top" style="background:#E1F5EE;"><div class="heart-badge" style="background:#1D9E75;">A</div></div>
+        <div class="heart-body">
+          <div class="heart-name">Action & Problem Solving</div>
+          <div class="heart-def">Turning goals into action: initiating, defining the problem, planning a path, following through, iterating, and taking ownership of outcomes.</div>
+          <div class="heart-hr"></div>
+          <div class="heart-ai" style="color:#0F6E56;">Children who can define real problems and own outcomes will put AI to work — as a tool in their hands, not a force beyond their control.</div>
+        </div>
+      </div>
+      <div class="heart-card">
+        <div class="heart-top" style="background:#F0EEFF;"><div class="heart-badge" style="background:#7B5EA7;">R</div></div>
+        <div class="heart-body">
+          <div class="heart-name">Resilience & Self-management</div>
+          <div class="heart-def">Regulating emotions under pressure, maintaining stability through difficulty, recovering from setbacks, and developing increasingly mature self-management habits.</div>
+          <div class="heart-hr"></div>
+          <div class="heart-ai" style="color:#4A2D82;">Children who can adapt and recover will meet every new wave of AI with confidence — each change becomes an opportunity, not a threat.</div>
+        </div>
+      </div>
+      <div class="heart-card">
+        <div class="heart-top" style="background:#FFF0ED;"><div class="heart-badge" style="background:#E05C3A;">T</div></div>
+        <div class="heart-body">
+          <div class="heart-name">Thinking & Creativity</div>
+          <div class="heart-def">Asking meaningful questions, making reasoned judgments, applying logical thinking, shifting perspectives, generating original ideas, and synthesizing different viewpoints into something new.</div>
+          <div class="heart-hr"></div>
+          <div class="heart-ai" style="color:#8B2500;">Children who can ask the right questions and think independently will direct AI, evaluate its output, and go further than it ever could alone.</div>
+        </div>
+      </div>
+    </div>
+    <div class="heart-closing">
+      <p>Children with HEART™ won't be displaced by AI — because these five irreplaceable competencies give them the confidence and capability to lead it, and use it on their own terms.</p>
+    </div>
+    <div class="heart-footer">Five competencies · 30 developmental indicators · Assessed through real behavioral observation — not tests</div>
+  </div>
+</section>
+
+<!-- 04 GROWLOOP -->
+<section class="gl-wrap">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">How It Works</div>
+      <h2>The GrowLoop™ Project Growth Cycle</h2>
+    </div>
+    <div class="gl-steps">
+      <div class="gl-step"><div class="gl-num">①</div><div class="gl-name">Inquire</div><div class="gl-line"></div><div class="gl-desc">Ask a real question worth thinking hard about, and go find the answer yourself.</div></div>
+      <div class="gl-step"><div class="gl-num">②</div><div class="gl-name">Design</div><div class="gl-line"></div><div class="gl-desc">Choose how to present what you discover, then make a plan and own it.</div></div>
+      <div class="gl-step"><div class="gl-num">③</div><div class="gl-name">Create</div><div class="gl-line"></div><div class="gl-desc">Build something real — and learn that the first idea is just the beginning.</div></div>
+      <div class="gl-step"><div class="gl-num">④</div><div class="gl-name">Revise</div><div class="gl-line"></div><div class="gl-desc">Bring your work to the group, hear honest feedback, and make it better.</div></div>
+      <div class="gl-step"><div class="gl-num">⑤</div><div class="gl-name">Present</div><div class="gl-line"></div><div class="gl-desc">Share your finished work with peers and family — and field real questions from a real audience.</div></div>
+      <div class="gl-step"><div class="gl-num">⑥</div><div class="gl-name">Reflect</div><div class="gl-line"></div><div class="gl-desc">Extract what you learned from the experience — not just what you made, but who you became.</div></div>
+    </div>
+    <div class="gl-cadence"><strong>One project per month</strong> · 4 weekly group sessions (including Monthly Showcase) · Ages 6–17</div>
+  </div>
+</section>
+
+<!-- 05 DIFFERENT -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">What Makes Us Different</div>
+      <h2>GrowMate™ vs Other Programs</h2>
+    </div>
+    <table class="diff-table">
+      <thead>
+        <tr>
+          <th class="col-label" style="width:18%;"></th>
+          <th class="col-gm" style="width:22%;"><div class="diff-badge">GrowMate™</div><br>HEART PBL Program</th>
+          <th class="col-other">Academic Tutoring</th>
+          <th class="col-other">Coding / STEAM</th>
+          <th class="col-other">Extracurriculars</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="row-label">What it develops</td><td class="col-gm">Human Core Competencies</td><td>Subject grades</td><td>Technical skills</td><td>Specific interest skills</td></tr>
+        <tr><td class="row-label">How children engage</td><td class="col-gm">Real projects, hands-on doing</td><td>Passive reception, drills</td><td>Skill training</td><td>Skill training</td></tr>
+        <tr><td class="row-label">How progress is measured</td><td class="col-gm">Behavioral observation · HEART™ Growth Reports</td><td>Exam scores</td><td>Work ratings</td><td>Performances / competitions</td></tr>
+        <tr><td class="row-label">Value in the AI era</td><td class="col-gm">Irreplaceable Human Core Competencies</td><td>Partially replaceable by AI</td><td>Partially replaceable by AI</td><td>Less replaceable</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 06 PILLARS -->
+<section class="pillars-wrap">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Three Pillars</div>
+      <h2>Three Pillars. Shape Growth.</h2>
+    </div>
+    <div class="pillars-grid">
+      <div class="pillar-card"><div class="pillar-icon">🔨</div><div class="pillar-name">Real Projects</div><div class="pillar-hr"></div><div class="pillar-desc">One real driving question each month. Children explore a genuine topic, move through the full GrowLoop™ cycle, and turn their thinking into a finished piece of work. No single right answer — just real choices, real challenges, and real results.</div></div>
+      <div class="pillar-card"><div class="pillar-icon">👥</div><div class="pillar-name">Peer Groups</div><div class="pillar-hr"></div><div class="pillar-desc">Each child belongs to a group of four same-age peers. They share progress, present work, and respond to each other at the Monthly Showcase. Peers are not competitors — they are witnesses, motivators, and genuine collaborators.</div></div>
+      <div class="pillar-card"><div class="pillar-icon">🧭</div><div class="pillar-name">Role Model Mentors</div><div class="pillar-hr"></div><div class="pillar-desc">GrowMate™ mentors don't lecture. They accompany children through discovery, creation, and reflection — asking the right questions, offering encouragement, guiding the debrief. They never do the work for the child. They help the child grow into their own capability.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 06.5 AGE TIERS -->
+<section class="tiers-wrap">
+  <div class="container">
+    <div class="tiers-header">
+      <div class="section-eyebrow">Who It's For</div>
+      <h2>Three Learner Levels</h2>
+    </div>
+    <div class="tiers-grid">
+      <div class="tier-card">
+        <div class="tier-icon">🔭</div>
+        <div class="tier-name">Explorers</div>
+        <div class="tier-age">Ages 6–9</div>
+        <div class="tier-hr"></div>
+        <div class="tier-desc">Curious and hands-on — children this age learn through doing. Projects are grounded in everyday life, with clear steps and room to discover. Mentors provide warm guidance while leaving plenty of space for each child's own ideas.</div>
+      </div>
+      <div class="tier-card">
+        <div class="tier-icon">🏗</div>
+        <div class="tier-name">Builders</div>
+        <div class="tier-age">Ages 10–13</div>
+        <div class="tier-hr"></div>
+        <div class="tier-desc">Ready to build something real — this age group cares about impact and wants to be taken seriously. Projects move into the community and beyond, with real audiences and genuine stakes. Mentors shift into a coaching role.</div>
+      </div>
+      <div class="tier-card">
+        <div class="tier-icon">🚀</div>
+        <div class="tier-name">Innovators</div>
+        <div class="tier-age">Ages 14–17</div>
+        <div class="tier-hr"></div>
+        <div class="tier-desc">Ready to engage with the world — with conviction, empathy, and the ability to take on real responsibility. Projects tackle city-scale and global issues. Mentors step back as advisors, handing full ownership to the child.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 SOCIAL PROOF -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">What Parents Are Saying</div>
+      <h2>From the Families</h2>
+    </div>
+    <div class="sp-grid">
+      <div class="sp-card"><div class="sp-quote-mark">"</div><div class="sp-quote">I was honestly skeptical at first — my daughter already has a full schedule. But after the first month, she started asking questions about things I'd never heard her wonder about before. That felt different.</div><div class="sp-hr"></div><div class="sp-author"><div class="sp-avatar">L</div><div><div class="sp-name">Linda C.</div><div class="sp-desc-text">Parent of an 8-year-old · Vancouver, BC</div></div></div></div>
+      <div class="sp-card"><div class="sp-quote-mark">"</div><div class="sp-quote">What surprised me most was watching him present at the Showcase. He was nervous, but he stood up there and explained his whole project. I didn't know he could do that. Neither did he.</div><div class="sp-hr"></div><div class="sp-author"><div class="sp-avatar">M</div><div><div class="sp-name">Michael T.</div><div class="sp-desc-text">Parent of a 10-year-old · Richmond, BC</div></div></div></div>
+      <div class="sp-card"><div class="sp-quote-mark">"</div><div class="sp-quote">The HEART™ Growth Report is unlike anything I've received from a school or program. It's specific — real examples of what my son actually did and said. That's what I needed to see.</div><div class="sp-hr"></div><div class="sp-author"><div class="sp-avatar">S</div><div><div class="sp-name">Sarah W.</div><div class="sp-desc-text">Parent of a 12-year-old · Burnaby, BC</div></div></div></div>
+    </div>
+    <div class="sp-note">* Placeholder quotes for design purposes — to be replaced with real parent testimonials before launch</div>
+  </div>
+</section>
+
+<!-- 08 CTA -->
+<section class="cta-wrap">
+  <div class="cta-inner">
+    <div class="cta-badge">Phase 1 · Now Enrolling</div>
+    <h2 class="cta-headline">32 children. 8 groups.<br>One chance to be part of the beginning.</h2>
+    <p class="cta-body">GrowMate™ Phase 1 is recruiting a small, carefully matched founding cohort. We're looking for families who believe in the long game — parents ready to invest in who their child is becoming, not just what they're scoring.</p>
+    <a href="#" class="cta-btn">Apply Now →</a>
+    <p class="cta-note">Takes 3 minutes · We'll follow up within 2 business days</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 GrowMate™. All rights reserved. · Lead the AI Era with HEART™</p>
+</footer>
+
+</body>
+</html>
