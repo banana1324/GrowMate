@@ -6,7 +6,19 @@
 
 <title>About HEART™ — GrowMate™</title>
 
+<meta name="description" content="Explore GrowMate's HEART framework: five Human Core Competencies designed to help children thrive and lead in an AI-driven world.">
+
+<link rel="canonical" href="https://growmate.ca/heart.html">
+<link rel="icon" type="image/png" href="favicon.png">
+
+<meta property="og:title" content="About HEART™ — GrowMate™">
+<meta property="og:description" content="Five Human Core Competencies children need most, and that AI is least equipped to replace.">
+<meta property="og:image" content="https://growmate.ca/social-preview.jpg">
+<meta property="og:url" content="https://growmate.ca/heart.html">
+<meta property="og:type" content="website">
+
 <style>
+
   *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -49,96 +61,6 @@
     padding: 80px 0;
   }
 
-  /* NAV */
-  nav {
-    background: #fff;
-    border-bottom: 1px solid var(--green-border);
-    padding: 0 40px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-
-  .nav-inner {
-    max-width: 1080px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 64px;
-  }
-
-  .nav-brand {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .nav-logo {
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--green-dark);
-    line-height: 1.2;
-  }
-
-  .nav-logo span {
-    color: var(--green-mid);
-  }
-
-  .nav-tagline {
-    font-size: 11px;
-    color: var(--green-mid);
-    font-weight: 500;
-    letter-spacing: 0.05em;
-    margin-top: 1px;
-    line-height: 1.4;
-  }
-
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-  }
-
-  .nav-links a.nav-text {
-    font-size: 14px;
-    color: var(--text-dark);
-    text-decoration: none;
-    font-weight: 500;
-  }
-
-  .nav-links a.nav-text:hover {
-    color: var(--green-mid);
-  }
-
-  .btn-apply {
-    background: var(--green-mid);
-    color: #fff;
-    padding: 8px 20px;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
-  }
-
-  .btn-apply:hover {
-    background: var(--green-dark);
-  }
-
-  .btn-member {
-    border: 1.5px solid #ccc;
-    color: #666;
-    padding: 7px 16px;
-    border-radius: 6px;
-    font-size: 13px;
-    font-weight: 500;
-    text-decoration: none;
-  }
-
-  .btn-member:hover {
-    border-color: var(--green-mid);
-    color: var(--green-mid);
-  }
-
   .section-eyebrow {
     font-size: 11px;
     font-weight: 600;
@@ -167,7 +89,9 @@
     line-height: 1.8;
   }
 
+
   /* HERO */
+
   .hero {
     background: var(--green-dark);
     padding: 96px 0 80px;
@@ -197,7 +121,9 @@
     color: #A8D970;
   }
 
-  /* WHY */
+
+  /* WHY FIVE */
+
   .why {
     background: var(--gray-bg);
   }
@@ -237,7 +163,9 @@
     line-height: 1.8;
   }
 
-  /* COMPETENCIES */
+
+  /* FIVE COMPETENCIES */
+
   .competencies {
     background: #fff;
   }
@@ -245,11 +173,13 @@
   .comp-list {
     display: flex;
     flex-direction: column;
+    gap: 0;
   }
 
   .comp-item {
     display: grid;
     grid-template-columns: 260px 1fr;
+    gap: 0;
     border-bottom: 1px solid #eee;
     padding: 48px 0;
     align-items: start;
@@ -289,6 +219,13 @@
     color: var(--text-dark);
   }
 
+  .comp-name-en {
+    font-size: 11px;
+    color: #aaa;
+    margin-top: 2px;
+    line-height: 1.4;
+  }
+
   .comp-def {
     font-size: 13px;
     color: #666;
@@ -305,6 +242,11 @@
     margin-bottom: 16px;
   }
 
+  .comp-ai strong {
+    color: var(--text-dark);
+    font-weight: 600;
+  }
+
   .comp-impact {
     font-size: 15px;
     font-weight: 600;
@@ -315,7 +257,9 @@
     border-radius: 8px;
   }
 
-  /* INDICATORS */
+
+  /* 30 INDICATORS */
+
   .indicators {
     background: var(--gray-bg);
   }
@@ -384,7 +328,9 @@
     color: var(--text-dark);
   }
 
+
   /* CLOSING */
+
   .closing {
     background: var(--green-dark);
   }
@@ -456,6 +402,9 @@
     background: #C0DD97;
   }
 
+
+  /* FOOTER */
+
   .footer-line {
     background: #1a3a06;
     padding: 20px 40px;
@@ -465,7 +414,11 @@
     letter-spacing: 0.1em;
   }
 
+
+  /* PAGE MOBILE */
+
   @media (max-width: 720px) {
+
     .container {
       padding: 0 20px;
     }
@@ -488,34 +441,238 @@
     .hero-headline {
       font-size: 24px;
     }
+
   }
+
+
+  /* SHARED GROWMATE NAV */
+
+  .gm-nav {
+    background: #fff;
+    border-bottom: 1px solid #C0DD97;
+    padding: 0 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .gm-nav-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .gm-nav-brand {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    text-decoration: none;
+  }
+
+  .gm-nav-logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: #27500A;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .gm-nav-logo span {
+    color: #3B6D11;
+  }
+
+  .gm-nav-tagline {
+    font-size: 11px;
+    color: #3B6D11;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    margin-top: 1px;
+    line-height: 1.4;
+    white-space: nowrap;
+  }
+
+  .gm-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-shrink: 0;
+    flex-wrap: nowrap;
+  }
+
+  .gm-nav-links a {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .gm-nav-text {
+    font-size: 14px;
+    color: #2C2C2A;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .gm-nav-text:hover {
+    color: #3B6D11;
+  }
+
+  .gm-btn-apply {
+    background: #3B6D11;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .gm-btn-apply:hover {
+    background: #27500A;
+  }
+
+  .gm-btn-member {
+    border: 1.5px solid #ccc;
+    color: #666;
+    padding: 7px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .gm-btn-member:hover {
+    border-color: #3B6D11;
+    color: #3B6D11;
+  }
+
+  .gm-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #27500A;
+    font-size: 27px;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+
+  /*
+    Full desktop header until 850px.
+    At 850px it switches directly to hamburger.
+    Padding remains 40px so the logo does not jump.
+  */
+
+  @media (max-width: 850px) {
+
+    .gm-menu-toggle {
+      display: block;
+    }
+
+    .gm-nav-links {
+      display: none;
+      position: absolute;
+      top: 64px;
+      left: -40px;
+      right: -40px;
+      background: #fff;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      padding: 14px 40px 24px;
+      border-bottom: 1px solid #C0DD97;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .gm-nav-links.open {
+      display: flex;
+    }
+
+    .gm-nav-text {
+      padding: 13px 0;
+      font-size: 14px;
+    }
+
+    .gm-btn-apply,
+    .gm-btn-member {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+  }
+
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-inner">
 
-    <a href="index.html" class="nav-brand" style="text-decoration:none;">
-      <div class="nav-logo">Grow<span>Mate</span>™</div>
-      <div class="nav-tagline">Lead the AI Era with HEART™</div>
+<!-- SHARED NAVIGATION -->
+
+<nav class="gm-nav">
+
+  <div class="gm-nav-inner">
+
+    <a href="index.html" class="gm-nav-brand">
+
+      <div class="gm-nav-logo">
+        Grow<span>Mate</span>™
+      </div>
+
+      <div class="gm-nav-tagline">
+        Lead the AI Era with HEART™
+      </div>
+
     </a>
 
-    <div class="nav-links">
-      <a href="about.html" class="nav-text">About Us</a>
-      <a href="heart.html" class="nav-text">About HEART™</a>
-      <a href="program.html" class="nav-text">The Program</a>
-      <a href="#" class="btn-apply">Apply Now →</a>
-      <a href="#" class="btn-member">Member Login</a>
+
+    <button
+      class="gm-menu-toggle"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="gm-main-navigation">
+      ☰
+    </button>
+
+
+    <div
+      class="gm-nav-links"
+      id="gm-main-navigation">
+
+      <a href="about.html" class="gm-nav-text">
+        About Us
+      </a>
+
+      <a href="heart.html" class="gm-nav-text">
+        About HEART™
+      </a>
+
+      <a href="program.html" class="gm-nav-text">
+        The Program
+      </a>
+
+      <a href="#" class="gm-btn-apply">
+        Apply Now →
+      </a>
+
+      <a href="#" class="gm-btn-member">
+        Member Login
+      </a>
+
     </div>
 
   </div>
+
 </nav>
 
+
 <!-- HERO -->
+
 <section class="hero">
+
   <div class="container">
 
     <div class="hero-eyebrow">
@@ -523,38 +680,49 @@
     </div>
 
     <h1 class="hero-headline">
+
       HEART™ is GrowMate™'s proprietary competency framework —
+
       <em>
         representing the five Human Core Competencies children need most,
         and that AI is least equipped to replace, in the AI era.
       </em>
+
     </h1>
 
   </div>
+
 </section>
 
+
 <!-- WHY FIVE -->
+
 <section class="why">
+
   <div class="container">
+
     <div class="why-inner">
 
-      <div class="section-eyebrow" style="text-align:center;">
+      <div
+        class="section-eyebrow"
+        style="text-align:center;">
         Why These Five
       </div>
 
       <p>
         HEART™ is built on two of the most respected international frameworks
         for 21st-century learning: the
-        <strong>OECD Learning Compass 2030</strong> and the
+        <strong>OECD Learning Compass 2030</strong>
+        and the
         <strong>P21 Framework for 21st Century Learning</strong>.
-        It was developed in direct response to what the AI era actually
-        demands of human beings — and represents one of GrowMate™'s core
-        intellectual assets.
+        It was developed in direct response to what the AI era actually demands
+        of human beings — and represents one of GrowMate™'s core intellectual assets.
       </p>
 
       <p>
-        We started with a question: when AI can memorize everything and
-        execute any standardized task, what does a child actually need?
+        We started with a question:
+        when AI can memorize everything and execute any standardized task,
+        what does a child actually need?
       </p>
 
       <div class="why-callout">
@@ -565,14 +733,20 @@
       </div>
 
     </div>
+
   </div>
+
 </section>
 
-<!-- COMPETENCIES -->
+
+<!-- FIVE COMPETENCIES -->
+
 <section class="competencies">
+
   <div class="container">
 
     <div class="section-header">
+
       <div class="section-eyebrow">
         HEART™ Five Human Core Competencies
       </div>
@@ -580,16 +754,33 @@
       <h2>
         Each one irreplaceable. All five essential.
       </h2>
+
     </div>
+
 
     <div class="comp-list">
 
+
+      <!-- H -->
+
       <div class="comp-item">
+
         <div class="comp-left">
 
           <div class="comp-badge-row">
-            <div class="comp-letter" style="background:#2E86C1;">H</div>
-            <div class="comp-name-cn">Human Collaboration</div>
+
+            <div
+              class="comp-letter"
+              style="background:#2E86C1;">
+              H
+            </div>
+
+            <div>
+              <div class="comp-name-cn">
+                Human Collaboration
+              </div>
+            </div>
+
           </div>
 
           <div class="comp-def">
@@ -600,27 +791,46 @@
 
         </div>
 
-        <div>
+
+        <div class="comp-right">
+
           <div class="comp-ai">
             AI can handle your information and organize your meeting notes —
-            but it cannot make your teammates trust you, and it cannot hold
-            a team together when things get hard.
+            but it cannot make your teammates trust you,
+            and it cannot hold a team together when things get hard.
           </div>
 
           <div class="comp-impact">
-            Children who can sense others, work through conflict, and move
-            forward together possess a competitive edge AI will never be
-            able to replicate.
+            Children who can sense others, work through conflict,
+            and move forward together possess a competitive edge
+            AI will never be able to replicate.
           </div>
+
         </div>
+
       </div>
 
+
+      <!-- E -->
+
       <div class="comp-item">
+
         <div class="comp-left">
 
           <div class="comp-badge-row">
-            <div class="comp-letter" style="background:#E8871A;">E</div>
-            <div class="comp-name-cn">Expression & Communication</div>
+
+            <div
+              class="comp-letter"
+              style="background:#E8871A;">
+              E
+            </div>
+
+            <div>
+              <div class="comp-name-cn">
+                Expression & Communication
+              </div>
+            </div>
+
           </div>
 
           <div class="comp-def">
@@ -631,11 +841,13 @@
 
         </div>
 
-        <div>
+
+        <div class="comp-right">
+
           <div class="comp-ai">
-            AI can polish your writing and generate your content — but it
-            cannot give you a point of view, and it cannot move an audience
-            the way a human voice can.
+            AI can polish your writing and generate your content —
+            but it cannot give you a point of view,
+            and it cannot move an audience the way a human voice can.
           </div>
 
           <div class="comp-impact">
@@ -643,108 +855,177 @@
             present themselves better — they influence people and change
             the world around them.
           </div>
+
         </div>
+
       </div>
 
+
+      <!-- A -->
+
       <div class="comp-item">
+
         <div class="comp-left">
 
           <div class="comp-badge-row">
-            <div class="comp-letter" style="background:#1D9E75;">A</div>
-            <div class="comp-name-cn">Action & Problem Solving</div>
+
+            <div
+              class="comp-letter"
+              style="background:#1D9E75;">
+              A
+            </div>
+
+            <div>
+              <div class="comp-name-cn">
+                Action & Problem Solving
+              </div>
+            </div>
+
           </div>
 
           <div class="comp-def">
             Turning goals into action: initiating, defining the problem,
-            planning a path, following through, iterating, and taking
-            ownership of outcomes.
+            planning a path, following through, iterating,
+            and taking ownership of outcomes.
           </div>
 
         </div>
 
-        <div>
+
+        <div class="comp-right">
+
           <div class="comp-ai">
-            AI can generate options and analyze scenarios — but it cannot
-            make the real decision, and it cannot be held responsible for
-            what happens next.
+            AI can generate options and analyze scenarios —
+            but it cannot make the real decision,
+            and it cannot be held responsible for what happens next.
           </div>
 
           <div class="comp-impact">
-            Children who can identify what actually matters, take initiative,
-            and own their results are the ones who use AI as a tool —
-            never the other way around.
+            Children who can identify what actually matters,
+            take initiative, and own their results are the ones who
+            use AI as a tool — never the other way around.
           </div>
+
         </div>
+
       </div>
 
+
+      <!-- R -->
+
       <div class="comp-item">
+
         <div class="comp-left">
 
           <div class="comp-badge-row">
-            <div class="comp-letter" style="background:#7B5EA7;">R</div>
-            <div class="comp-name-cn">Resilience & Self-management</div>
+
+            <div
+              class="comp-letter"
+              style="background:#7B5EA7;">
+              R
+            </div>
+
+            <div>
+              <div class="comp-name-cn">
+                Resilience & Self-management
+              </div>
+            </div>
+
           </div>
 
           <div class="comp-def">
-            Regulating emotions under pressure, maintaining stability through
-            difficulty, recovering from setbacks, and developing increasingly
-            mature self-management habits.
+            Regulating emotions under pressure,
+            maintaining stability through difficulty,
+            recovering from setbacks,
+            and developing increasingly mature self-management habits.
           </div>
 
         </div>
 
-        <div>
+
+        <div class="comp-right">
+
           <div class="comp-ai">
-            AI can manage your calendar and set your reminders — but it
-            cannot keep you clear-headed under pressure, and it cannot get
-            back up after you fall.
+            AI can manage your calendar and set your reminders —
+            but it cannot keep you clear-headed under pressure,
+            and it cannot get back up after you fall.
           </div>
 
           <div class="comp-impact">
-            Children who stay grounded in uncertainty and recover from failure
-            turn every wave of technological change into opportunity — not threat.
+            Children who stay grounded in uncertainty
+            and recover from failure turn every wave of technological change
+            into opportunity — not threat.
           </div>
+
         </div>
+
       </div>
 
+
+      <!-- T -->
+
       <div class="comp-item">
+
         <div class="comp-left">
 
           <div class="comp-badge-row">
-            <div class="comp-letter" style="background:#E05C3A;">T</div>
-            <div class="comp-name-cn">Thinking & Creativity</div>
+
+            <div
+              class="comp-letter"
+              style="background:#E05C3A;">
+              T
+            </div>
+
+            <div>
+              <div class="comp-name-cn">
+                Thinking & Creativity
+              </div>
+            </div>
+
           </div>
 
           <div class="comp-def">
             Asking meaningful questions, making reasoned judgments,
-            applying logical thinking, shifting perspectives, generating
-            original ideas, and synthesizing different viewpoints into
-            something new.
+            applying logical thinking, shifting perspectives,
+            generating original ideas, and synthesizing different viewpoints
+            into something new.
           </div>
 
         </div>
 
-        <div>
+
+        <div class="comp-right">
+
           <div class="comp-ai">
-            AI can give you answers — but it cannot ask the questions that
-            matter, and it cannot decide what is worth pursuing in the first place.
+            AI can give you answers —
+            but it cannot ask the questions that matter,
+            and it cannot decide what is worth pursuing in the first place.
           </div>
 
           <div class="comp-impact">
-            Children who think independently, judge critically, and solve
-            problems creatively are the ones who truly direct AI — knowing
-            what to ask, what to trust, and what to push beyond.
+            Children who think independently, judge critically,
+            and solve problems creatively are the ones who truly direct AI —
+            knowing what to ask, what to trust, and what to push beyond.
           </div>
+
         </div>
+
       </div>
 
+
     </div>
+
   </div>
+
 </section>
 
-<!-- INDICATORS -->
+
+<!-- 30 INDICATORS -->
+
 <section class="indicators">
+
   <div class="container">
+
     <div class="ind-inner">
 
       <div class="section-header">
@@ -759,99 +1040,325 @@
 
       </div>
 
+
       <div class="ind-grid">
 
         <div class="ind-card">
-          <div class="ind-letter" style="background:#2E86C1;">H</div>
-          <div class="ind-label">Human Collaboration</div>
-          <div class="ind-count">6</div>
-          <div class="ind-sub">indicators</div>
+
+          <div
+            class="ind-letter"
+            style="background:#2E86C1;">
+            H
+          </div>
+
+          <div class="ind-label">
+            Human Collaboration
+          </div>
+
+          <div class="ind-count">
+            6
+          </div>
+
+          <div class="ind-sub">
+            indicators
+          </div>
+
         </div>
 
-        <div class="ind-card">
-          <div class="ind-letter" style="background:#E8871A;">E</div>
-          <div class="ind-label">Expression & Communication</div>
-          <div class="ind-count">6</div>
-          <div class="ind-sub">indicators</div>
-        </div>
 
         <div class="ind-card">
-          <div class="ind-letter" style="background:#1D9E75;">A</div>
-          <div class="ind-label">Action & Problem Solving</div>
-          <div class="ind-count">6</div>
-          <div class="ind-sub">indicators</div>
+
+          <div
+            class="ind-letter"
+            style="background:#E8871A;">
+            E
+          </div>
+
+          <div class="ind-label">
+            Expression & Communication
+          </div>
+
+          <div class="ind-count">
+            6
+          </div>
+
+          <div class="ind-sub">
+            indicators
+          </div>
+
         </div>
 
-        <div class="ind-card">
-          <div class="ind-letter" style="background:#7B5EA7;">R</div>
-          <div class="ind-label">Resilience & Self-management</div>
-          <div class="ind-count">6</div>
-          <div class="ind-sub">indicators</div>
-        </div>
 
         <div class="ind-card">
-          <div class="ind-letter" style="background:#E05C3A;">T</div>
-          <div class="ind-label">Thinking & Creativity</div>
-          <div class="ind-count">6</div>
-          <div class="ind-sub">indicators</div>
+
+          <div
+            class="ind-letter"
+            style="background:#1D9E75;">
+            A
+          </div>
+
+          <div class="ind-label">
+            Action & Problem Solving
+          </div>
+
+          <div class="ind-count">
+            6
+          </div>
+
+          <div class="ind-sub">
+            indicators
+          </div>
+
+        </div>
+
+
+        <div class="ind-card">
+
+          <div
+            class="ind-letter"
+            style="background:#7B5EA7;">
+            R
+          </div>
+
+          <div class="ind-label">
+            Resilience & Self-management
+          </div>
+
+          <div class="ind-count">
+            6
+          </div>
+
+          <div class="ind-sub">
+            indicators
+          </div>
+
+        </div>
+
+
+        <div class="ind-card">
+
+          <div
+            class="ind-letter"
+            style="background:#E05C3A;">
+            T
+          </div>
+
+          <div class="ind-label">
+            Thinking & Creativity
+          </div>
+
+          <div class="ind-count">
+            6
+          </div>
+
+          <div class="ind-sub">
+            indicators
+          </div>
+
         </div>
 
       </div>
 
+
       <div class="ind-method">
+
         Assessment is grounded in
-        <strong>behavioral observation</strong>,
+        <strong>
+          behavioral observation
+        </strong>,
+
         triangulated across three perspectives:
+
         <strong>
           mentor observation, parent documentation, and child self-reflection
         </strong>.
-        The result is a growth record that is concrete, credible, and genuinely
-        meaningful — not a test score, but a real picture of how a child is developing.
+
+        The result is a growth record that is concrete, credible,
+        and genuinely meaningful — not a test score,
+        but a real picture of how a child is developing.
+
       </div>
 
     </div>
+
   </div>
+
 </section>
 
+
 <!-- CLOSING -->
+
 <section class="closing">
+
   <div class="container">
+
     <div class="closing-inner">
 
       <div class="closing-body">
-        Individually, each of these five capabilities makes a child more
-        grounded, more capable, and more ready for what comes next.
-        Together, they form something more powerful: a child's complete
-        <strong>soft skills</strong> foundation — one that goes far beyond
-        surviving the AI era. To lead it. To define it. To make it serve
-        what actually matters.
+
+        Individually, each of these five capabilities makes a child
+        more grounded, more capable, and more ready for what comes next.
+
+        Together, they form something more powerful:
+        a child's complete
+
+        <strong>
+          soft skills
+        </strong>
+
+        foundation — one that goes far beyond surviving the AI era.
+
+        To lead it.
+        To define it.
+        To make it serve what actually matters.
+
       </div>
 
+
       <div class="closing-tagline">
-        This is what <em>Lead the AI Era with HEART™</em> means.
+
+        This is what
+
+        <em>
+          Lead the AI Era with HEART™
+        </em>
+
+        means.
+
       </div>
+
 
       <div class="closing-sub">
         Not fear of being replaced — but the confidence to stand above it.
       </div>
 
+
       <div class="closing-divider"></div>
 
+
       <div class="closing-cta-label">
-        HEART™ is the destination. The GrowMate™ HEART PBL Program is how children get there.
+        HEART™ is the destination.
+        The GrowMate™ HEART PBL Program is how children get there.
       </div>
 
-      <a href="program.html" class="btn-cta">
+
+      <a
+        href="program.html"
+        class="btn-cta">
         Explore Our Program →
       </a>
 
     </div>
+
   </div>
+
 </section>
+
 
 <div class="footer-line">
   GROWMATE™ · LEAD THE AI ERA WITH HEART™
 </div>
+
+
+<script>
+
+  const gmMenuButton =
+    document.querySelector('.gm-menu-toggle');
+
+  const gmNavLinks =
+    document.querySelector('.gm-nav-links');
+
+
+  gmMenuButton.addEventListener(
+    'click',
+    function () {
+
+      const isOpen =
+        gmNavLinks.classList.toggle('open');
+
+      gmMenuButton.setAttribute(
+        'aria-expanded',
+        isOpen
+      );
+
+      if (isOpen) {
+
+        gmMenuButton.textContent = '✕';
+
+        gmMenuButton.setAttribute(
+          'aria-label',
+          'Close navigation menu'
+        );
+
+      } else {
+
+        gmMenuButton.textContent = '☰';
+
+        gmMenuButton.setAttribute(
+          'aria-label',
+          'Open navigation menu'
+        );
+
+      }
+
+    }
+  );
+
+
+  document
+    .querySelectorAll('.gm-nav-links a')
+    .forEach(function(link) {
+
+      link.addEventListener(
+        'click',
+        function() {
+
+          gmNavLinks.classList.remove('open');
+
+          gmMenuButton.setAttribute(
+            'aria-expanded',
+            'false'
+          );
+
+          gmMenuButton.setAttribute(
+            'aria-label',
+            'Open navigation menu'
+          );
+
+          gmMenuButton.textContent = '☰';
+
+        }
+      );
+
+    });
+
+
+  window.addEventListener(
+    'resize',
+    function() {
+
+      if (window.innerWidth > 850) {
+
+        gmNavLinks.classList.remove('open');
+
+        gmMenuButton.setAttribute(
+          'aria-expanded',
+          'false'
+        );
+
+        gmMenuButton.setAttribute(
+          'aria-label',
+          'Open navigation menu'
+        );
+
+        gmMenuButton.textContent = '☰';
+
+      }
+
+    }
+  );
+
+</script>
 
 </body>
 </html>
