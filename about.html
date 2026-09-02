@@ -1,332 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Why GrowMate exists, what we believe, and our mission for human core competency development in the AI era.">
-<title>About Us — GrowMate™</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root {
-    --green: #3B6D11; --green-dark: #27500A; --green-light: #EAF3DE;
-    --green-mid: #5A8A28; --green-border: #C0DD97; --text-dark: #2C2C2A;
-    --ink: #2C2C2A; --ink-soft: #5A5A58; --ink-muted: #8A8A87;
-    --rule: #D8E8C8; --bg: #F7FAF3; --white: #FFFFFF; --accent: #A8D970;
-  }
-  html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--ink); line-height: 1.75; font-size: 16px; }
-
-
-  /* NAV */
-  nav {
-    background: #fff;
-    border-bottom: 1px solid var(--green-border);
-    padding: 0 40px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  .nav-inner {
-    max-width: 1080px;
-    margin: 0 auto;
-    min-height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    position: relative;
-  }
-  .nav-brand {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    flex-shrink: 0;
-  }
-  .brand-logo {
-    width: 220px;
-    height: auto;
-    display: block;
-  }
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-  }
-  .nav-links a.nav-text {
-    font-size: 14px;
-    color: var(--text-dark);
-    text-decoration: none;
-    font-weight: 500;
-    white-space: nowrap;
-  }
-  .nav-links a.nav-text:hover { color: var(--green-mid); }
-  .btn-apply {
-    background: var(--green-mid);
-    color: #fff;
-    padding: 8px 18px;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-  .btn-apply:hover { background: var(--green-dark); }
-  .btn-member {
-    border: 1.5px solid #ccc;
-    color: #666;
-    padding: 7px 14px;
-    border-radius: 6px;
-    font-size: 13px;
-    font-weight: 500;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-  .btn-member:hover { border-color: var(--green-mid); color: var(--green-mid); }
-  .nav-toggle {
-    display: none;
-    width: 42px;
-    height: 42px;
-    border: 1px solid #ddd;
-    border-radius: 7px;
-    background: #fff;
-    color: var(--green-dark);
-    font-size: 22px;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-  }
-
-  @media (max-width: 940px) {
-    nav { padding: 0 20px; }
-    .brand-logo { width: 190px; }
-    .nav-toggle { display: flex; }
-    .nav-links {
-      display: none;
-      position: absolute;
-      top: calc(100% + 1px);
-      left: 0;
-      right: 0;
-      background: #fff;
-      border: 1px solid var(--green-border);
-      border-top: none;
-      border-radius: 0 0 10px 10px;
-      padding: 18px;
-      flex-direction: column;
-      align-items: stretch;
-      gap: 8px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-    }
-    .nav-links.open { display: flex; }
-    .nav-links a { text-align: center; }
-  }
-
-  @media (max-width: 520px) {
-    .brand-logo { width: 165px; }
-  }
-
-
-  .hero { background: var(--green-dark); padding: 96px 24px 88px; text-align: center; position: relative; overflow: hidden; }
-  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 110%, rgba(90,138,40,0.3) 0%, transparent 70%); pointer-events: none; }
-  .hero-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 32px; }
-  .hero-headline { font-size: clamp(26px, 5.5vw, 44px); font-weight: 700; color: var(--white); line-height: 1.35; max-width: 680px; margin: 0 auto 12px; position: relative; }
-  .hero-headline em { font-style: normal; color: var(--accent); font-weight: 300; }
-  .hero-sub { font-size: 14px; font-style: italic; color: rgba(255,255,255,0.45); margin-top: 20px; position: relative; }
-  .section-label { font-size: 10px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--green-mid); margin-bottom: 20px; }
-
-  .story { background: var(--white); padding: 72px 24px; }
-  .story-inner { max-width: 700px; margin: 0 auto; }
-  .story-heading { font-size: clamp(22px, 4vw, 30px); font-weight: 700; color: var(--green-dark); line-height: 1.4; margin-bottom: 32px; }
-  .story p { color: var(--ink-soft); margin-bottom: 20px; font-size: 16px; line-height: 1.85; font-weight: 300; }
-  .story p:last-of-type { margin-bottom: 0; }
-  .story strong { color: var(--ink); font-weight: 600; }
-  .story-closing { margin-top: 36px; padding: 24px 28px; border-left: 3px solid var(--green); background: var(--green-light); border-radius: 0 8px 8px 0; font-size: 16px; color: var(--green-dark); line-height: 1.75; font-weight: 500; }
-
-  .beliefs { background: var(--bg); padding: 72px 24px; }
-  .beliefs-inner { max-width: 700px; margin: 0 auto; }
-  .beliefs-heading { font-size: clamp(20px, 3.5vw, 26px); font-weight: 700; color: var(--ink); margin-bottom: 48px; line-height: 1.4; }
-  .belief-item { display: grid; grid-template-columns: 48px 1fr; gap: 0 24px; margin-bottom: 48px; align-items: start; }
-  .belief-item:last-child { margin-bottom: 0; }
-  .belief-num { font-size: 30px; font-weight: 700; color: var(--rule); line-height: 1.2; text-align: right; padding-top: 2px; }
-  .belief-title { font-size: 15px; font-weight: 600; color: var(--green-dark); line-height: 1.5; margin-bottom: 10px; }
-  .belief-title em { font-style: normal; color: var(--green); }
-  .belief-text { font-size: 15px; color: var(--ink-soft); line-height: 1.85; font-weight: 300; }
-  .belief-divider { grid-column: 2; height: 1px; background: var(--rule); margin-top: 32px; }
-
-  .mv { background: var(--green-dark); padding: 72px 24px; }
-  .mv-inner { max-width: 700px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
-  .mv-label { font-size: 10px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,0.38); margin-bottom: 16px; }
-  .mv-text { font-size: 16px; color: rgba(255,255,255,0.85); line-height: 1.85; font-weight: 400; }
-  .mv-text strong { color: var(--accent); font-weight: 600; font-size: 15px; }
-  .mv-divider { display: none; }
-
-  .closing { background: var(--white); padding: 72px 24px 88px; text-align: center; }
-  .closing-inner { max-width: 580px; margin: 0 auto; }
-  .closing-lead { font-size: clamp(18px, 3.5vw, 24px); color: var(--ink); line-height: 1.65; margin-bottom: 40px; font-weight: 600; }
-  .mates { display: flex; flex-direction: column; margin-bottom: 40px; border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; }
-  .mate-row { padding: 14px 24px; font-size: 14px; color: var(--ink-soft); border-bottom: 1px solid var(--rule); text-align: left; font-weight: 400; line-height: 1.5; }
-  .mate-row:last-child { border-bottom: none; }
-  .mate-row strong { color: var(--green-dark); font-weight: 600; }
-  .closing-tagline { font-size: 13px; font-style: italic; color: var(--ink-muted); margin-bottom: 16px; }
-  .closing-name { font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--green-dark); }
-  .learn-more-btn { display: inline-block; margin-top: 30px; background: var(--green); color: #fff; padding: 13px 28px; border-radius: 8px; font-size: 15px; font-weight: 600; text-decoration: none; }
-  .learn-more-btn:hover { background: var(--green-dark); }
-  .footer-line { background: var(--green-dark); padding: 20px 24px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.28); letter-spacing: .1em; font-weight: 500; }
-
-  @media (max-width: 580px) {
-    .mv-inner { grid-template-columns: 1fr; gap: 40px; }
-    .mv-divider { display: block; height: 1px; background: rgba(255,255,255,0.1); }
-    .belief-item { grid-template-columns: 36px 1fr; gap: 0 16px; }
-  }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Why GrowMate exists, what we believe, and how we think about human capability in the AI era.">
+  <title>About Us | GrowMate™</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-
-<nav>
-  <div class="nav-inner">
-    <a href="index.html" class="nav-brand" aria-label="GrowMate home">
-      <img src="GrowMate.png" alt="GrowMate — Lead the AI Era with HEART" class="brand-logo">
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="GrowMate home">
+      <img src="GrowMate.png" alt="GrowMate, Lead the AI Era with HEART">
     </a>
-
     <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
-
-    <div class="nav-links">
-      <a href="about.html" class="nav-text">About Us</a>
-      <a href="heart.html" class="nav-text">About HEART™</a>
-      <a href="program.html" class="nav-text">The Program</a>
-      <a href="apply.html" class="btn-apply">Apply Now →</a>
-      <a href="#" class="btn-member" title="Membership section coming next">Member Login</a>
-    </div>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="about.html">About Us</a>
+      <a href="heart.html">About HEART™</a>
+      <a href="program.html">Our Program</a>
+      <a class="nav-apply" href="apply.html">Apply Now</a>
+      <a class="member-link" href="#" aria-disabled="true" title="Membership section coming next">Member Login</a>
+    </nav>
   </div>
-</nav>
-
-
-<section class="hero">
-  <div class="hero-eyebrow">About Us</div>
-  <h1 class="hero-headline">
-    Every child deserves to grow up capable —<br>
-    <em>not just of earning good grades,<br>but of building a life that's genuinely their own.</em>
-  </h1>
-  <div class="hero-sub">That question has been at the heart of GrowMate™ from the very beginning.</div>
-</section>
-
-<section class="story">
-  <div class="story-inner">
-    <div class="section-label">Why We're Here</div>
-    <h2 class="story-heading">The world our children are growing into looks nothing like the one we grew up in.</h2>
-    <p>AI is already replacing work that used to require years of training. The qualities that once defined a strong student — memorizing facts, following instructions, executing predictable tasks — are being outpaced by machines at an unprecedented rate.</p>
-    <p>But there are things AI cannot do. It cannot build real trust. It cannot navigate genuinely ambiguous situations with emotional intelligence. It cannot recover from failure with grace. It cannot lead people, earn loyalty, or create something that truly matters.</p>
-    <p>The children who will shape the future are those who have learned to <strong>collaborate, communicate, act, persist, create, and think critically</strong> — not because they were told to, but because they built those capabilities through real experience, over and over again.</p>
-    <div class="story-closing">
-      That's the gap GrowMate™ was built to close. Not with another class — but by making real experience the classroom, where children grow these Human Core Competencies through genuine challenge.
+</header>
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">About Us</p>
+      <h1>Every child deserves to grow up capable, <span>not just good at school.</span></h1>
+      <p class="subline">GrowMate™ was built around a simple question: what abilities will children keep using when the tools around them keep changing?</p>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="beliefs">
-  <div class="beliefs-inner">
-    <div class="section-label">What We Believe</div>
-    <h2 class="beliefs-heading">Five beliefs that shape everything we do.</h2>
+  <section>
+    <div class="narrow prose">
+      <p class="section-kicker">Why We're Here</p>
+      <h2 class="section-heading">The world children are growing into is changing quickly.</h2>
+      <p>AI can already handle many tasks that used to require time, training, and repetition. That makes some traditional measures of success less useful on their own.</p>
+      <p>Children still need to work with people, explain ideas, make decisions, recover from setbacks, and think for themselves. Those abilities are built through experience, not worksheets.</p>
+      <div class="callout">GrowMate™ gives children a place to practice those abilities through projects, peer interaction, mentor guidance, and reflection.</div>
+    </div>
+  </section>
 
-    <div class="belief-item">
-      <div class="belief-num">01</div>
-      <div>
-        <div class="belief-title">We believe <em>competency isn't taught — it's built through challenge.</em></div>
-        <div class="belief-text">Collaboration, communication, action, resilience, creative thinking — none of these develop from sitting in a classroom. They only grow through real tasks, real relationships, and real stakes: planning, attempting, failing, adjusting, reflecting — again and again.</div>
-        <div class="belief-divider"></div>
+  <section class="text-section">
+    <div class="narrow">
+      <p class="section-kicker">What We Believe</p>
+      <h2 class="section-heading">Five beliefs that guide the program</h2>
+      <div class="detail-list">
+        <div class="detail-row"><div class="detail-left"><h3>01 · Ability grows through challenge</h3></div><div class="detail-body"><p>Collaboration, communication, resilience, action, and creative thinking improve when children have real work to do and real people to work with.</p></div></div>
+        <div class="detail-row"><div class="detail-left"><h3>02 · A good process can travel</h3></div><div class="detail-body"><p>GrowLoop™ is a repeatable way to approach unfamiliar work: inquire, design, create, revise, present, and reflect. It can be used far beyond one subject.</p></div></div>
+        <div class="detail-row"><div class="detail-left"><h3>03 · Long-term capability matters</h3></div><div class="detail-body"><p>Grades describe part of a child's performance today. We also care about the habits and abilities that affect how they handle new situations later.</p></div></div>
+        <div class="detail-row"><div class="detail-left"><h3>04 · AI should be a tool</h3></div><div class="detail-body"><p>Children should learn to use AI thoughtfully, question its output, and decide when it helps. The goal is judgment, not dependence.</p></div></div>
+        <div class="detail-row"><div class="detail-left"><h3>05 · Parents matter</h3></div><div class="detail-body"><p>Parents do not need to manage the project. Their role is to notice, encourage, and make space for the child to take ownership.</p></div></div>
       </div>
     </div>
+  </section>
 
-    <div class="belief-item">
-      <div class="belief-num">02</div>
-      <div>
-        <div class="belief-title">We believe <em>the right thinking framework stays with a child for life.</em></div>
-        <div class="belief-text">GrowLoop™ is more than a project structure. It builds a way of thinking — inquire, design, create, revise, present, reflect — extracting real learning from the whole experience. Learning how to learn. This way of thinking belongs to no single subject, and no technology will ever make it obsolete.</div>
-        <div class="belief-divider"></div>
+  <section class="dark-split">
+    <div class="narrow split-grid">
+      <div><p class="split-label">Vision</p><p>To make <strong>Human Core Competency</strong> development a normal part of how young people prepare for an AI-driven world.</p></div>
+      <div><p class="split-label">Mission</p><p>To help children ages 6-17 build those abilities through <strong>real projects, real relationships, and repeated practice</strong>.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="narrow center">
+      <p class="section-kicker">Five Mates. One Journey.</p>
+      <h2 class="section-heading">Growth is easier when children are not doing it alone.</h2>
+      <div class="mates">
+        <div class="mate"><strong>A Mate for your child:</strong> present through projects, challenges, and setbacks.</div>
+        <div class="mate"><strong>Peer Mates:</strong> children learning alongside the same small group.</div>
+        <div class="mate"><strong>Mentor Mates:</strong> guiding without taking over.</div>
+        <div class="mate"><strong>Parents:</strong> the people whose support matters most.</div>
+        <div class="mate"><strong>GrowMate™:</strong> a structure that connects the pieces.</div>
       </div>
+      <div style="margin-top:24px"><a class="button button-primary" href="heart.html">Learn More About HEART™</a></div>
     </div>
-
-    <div class="belief-item">
-      <div class="belief-num">03</div>
-      <div>
-        <div class="belief-title">We believe <em>long-term capability is what determines how far a child can go.</em></div>
-        <div class="belief-text">Grades tell you where your child stands today. Capability determines how far they go. GrowMate™ isn't working on the most urgent problem — it's working on the most important one: laying the foundation for a successful, fulfilling life. One meaningful project each month, consistently over time — the compounding effect of that commitment shows up at every turning point.</div>
-        <div class="belief-divider"></div>
-      </div>
-    </div>
-
-    <div class="belief-item">
-      <div class="belief-num">04</div>
-      <div>
-        <div class="belief-title">We believe <em>children who lead AI will shape the future.</em></div>
-        <div class="belief-text">GrowMate™ isn't about competing with AI. It's about developing the Human Core Competencies AI cannot replicate — so that children can direct it, shape it, and lead in a world where it is everywhere. The power to define their own future.</div>
-        <div class="belief-divider"></div>
-      </div>
-    </div>
-
-    <div class="belief-item">
-      <div class="belief-num">05</div>
-      <div>
-        <div class="belief-title">We believe <em>a parent's presence is the most powerful form of education.</em></div>
-        <div class="belief-text">GrowMate™ doesn't ask parents to become experts. We invite you to become a witness — to notice how your child responds when things get hard, to encourage one more try when they want to quit, to be present for the moments that are imperfect but formative. That presence carries more weight than any program ever could.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="mv">
-  <div class="mv-inner">
-    <div>
-      <div class="mv-label">Vision</div>
-      <div class="mv-text">To become the defining platform for <strong>Human Core Competency</strong> development in youth — where every child grows into a capable, compassionate, and creative person ready to thrive in the age of AI.</div>
-    </div>
-    <div class="mv-divider"></div>
-    <div>
-      <div class="mv-label">Mission</div>
-      <div class="mv-text">To help every child between the ages of 6 and 17 systematically build the <strong>Human Core Competencies</strong> that matter most in an AI-driven world — through real projects, real relationships, and real challenges — so that <strong>growth itself becomes the most solid foundation they will ever carry.</strong></div>
-    </div>
-  </div>
-</section>
-
-<section class="closing">
-  <div class="closing-inner">
-    <div class="section-label" style="text-align:center;">Five Mates. One Journey.</div>
-    <p class="closing-lead">Growth is never a solo project. It takes mentors, peers, and family — working together, over time, to make it possible.</p>
-    <div class="mates">
-      <div class="mate-row"><strong>A Mate for your child</strong> — present through every project, every challenge, every setback</div>
-      <div class="mate-row"><strong>A Mate between peers</strong> — four children in the same group, growing alongside each other</div>
-      <div class="mate-row"><strong>A Mate in every mentor</strong> — guiding without taking over, present without replacing</div>
-      <div class="mate-row"><strong>You are your child's most important Mate</strong> — no one carries more weight than you do</div>
-      <div class="mate-row"><strong>And GrowMate™ is a Mate for you</strong> — supporting you as you raise a capable, confident, resilient person</div>
-    </div>
-    <div class="closing-tagline">Five Mates. One journey. That's GrowMate™.</div>
-    <div class="closing-name">GrowMate™ · Lead the AI Era with HEART™</div>
-    <a href="heart.html" class="learn-more-btn">Learn More →</a>
-  </div>
-</section>
-
-<div class="footer-line">GROWMATE™ · THE POWER TO DEFINE THE FUTURE</div>
-
-
-<script>
-  const navToggle = document.querySelector('.nav-toggle');
-  const navLinks = document.querySelector('.nav-links');
-
-  if (navToggle && navLinks) {
-    navToggle.addEventListener('click', () => {
-      const isOpen = navLinks.classList.toggle('open');
-      navToggle.setAttribute('aria-expanded', String(isOpen));
-    });
-
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-  }
-</script>
-
+  </section>
+</main>
+<footer class="site-footer">© 2026 GrowMate™ · Lead the AI Era with HEART™</footer>
+<script src="site.js"></script>
 </body>
 </html>
