@@ -1,362 +1,101 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Explore GrowMate's HEART™ framework: five human core competencies and 30 development indicators for the AI era.">
-<title>About HEART™ — GrowMate™</title>
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { font-size: 16px; scroll-behavior: smooth; }
-  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #2C2C2A; background: #fff; line-height: 1.7; }
-  :root {
-    --green-dark: #27500A; --green-mid: #3B6D11; --green-light: #EAF3DE;
-    --green-border: #C0DD97; --text-dark: #2C2C2A; --gray-bg: #F7F7F5;
-  }
-  h1, h2, h3 { line-height: 1.3; font-weight: 700; }
-  .container { max-width: 1080px; margin: 0 auto; padding: 0 40px; }
-  section { padding: 80px 0; }
-  .section-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: var(--green-mid); margin-bottom: 12px; text-transform: uppercase; }
-  .section-header { text-align: center; margin-bottom: 48px; }
-  .section-header h2 { font-size: 30px; color: var(--green-dark); margin-bottom: 12px; }
-
-
-  /* NAV */
-  nav {
-    background: #fff;
-    border-bottom: 1px solid var(--green-border);
-    padding: 0 40px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  .nav-inner {
-    max-width: 1080px;
-    margin: 0 auto;
-    min-height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    position: relative;
-  }
-  .nav-brand {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    flex-shrink: 0;
-  }
-  .brand-logo {
-    width: 220px;
-    height: auto;
-    display: block;
-  }
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-  }
-  .nav-links a.nav-text {
-    font-size: 14px;
-    color: var(--text-dark);
-    text-decoration: none;
-    font-weight: 500;
-    white-space: nowrap;
-  }
-  .nav-links a.nav-text:hover { color: var(--green-mid); }
-  .btn-apply {
-    background: var(--green-mid);
-    color: #fff;
-    padding: 8px 18px;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-  .btn-apply:hover { background: var(--green-dark); }
-  .btn-member {
-    border: 1.5px solid #ccc;
-    color: #666;
-    padding: 7px 14px;
-    border-radius: 6px;
-    font-size: 13px;
-    font-weight: 500;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-  .btn-member:hover { border-color: var(--green-mid); color: var(--green-mid); }
-  .nav-toggle {
-    display: none;
-    width: 42px;
-    height: 42px;
-    border: 1px solid #ddd;
-    border-radius: 7px;
-    background: #fff;
-    color: var(--green-dark);
-    font-size: 22px;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-  }
-
-  @media (max-width: 940px) {
-    nav { padding: 0 20px; }
-    .brand-logo { width: 190px; }
-    .nav-toggle { display: flex; }
-    .nav-links {
-      display: none;
-      position: absolute;
-      top: calc(100% + 1px);
-      left: 0;
-      right: 0;
-      background: #fff;
-      border: 1px solid var(--green-border);
-      border-top: none;
-      border-radius: 0 0 10px 10px;
-      padding: 18px;
-      flex-direction: column;
-      align-items: stretch;
-      gap: 8px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-    }
-    .nav-links.open { display: flex; }
-    .nav-links a { text-align: center; }
-  }
-
-  @media (max-width: 520px) {
-    .brand-logo { width: 165px; }
-  }
-
-
-  .hero { background: var(--green-dark); padding: 96px 0 80px; text-align: center; }
-  .hero-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.15em; color: rgba(255,255,255,0.45); margin-bottom: 24px; text-transform: uppercase; }
-  .hero-headline { font-size: clamp(24px, 3.5vw, 38px); font-weight: 700; color: #fff; line-height: 1.45; max-width: 740px; margin: 0 auto; }
-  .hero-headline em { font-style: normal; color: #A8D970; }
-
-  .why { background: var(--gray-bg); }
-  .why-inner { max-width: 760px; margin: 0 auto; text-align: center; }
-  .why-inner p { font-size: 16px; color: #444; line-height: 1.95; margin-bottom: 20px; }
-  .why-inner p:last-child { margin-bottom: 0; }
-  .why-inner strong { color: var(--text-dark); font-weight: 600; }
-  .why-callout { margin-top: 36px; background: var(--green-light); border-left: 3px solid var(--green-mid); border-radius: 0 10px 10px 0; padding: 20px 24px; text-align: left; font-size: 15px; color: var(--green-dark); font-weight: 500; line-height: 1.8; }
-
-  .competencies { background: #fff; }
-  .comp-list { display: flex; flex-direction: column; }
-  .comp-item { display: grid; grid-template-columns: 260px 1fr; border-bottom: 1px solid #eee; padding: 48px 0; align-items: start; }
-  .comp-item:last-child { border-bottom: none; }
-  .comp-left { padding-right: 40px; }
-  .comp-badge-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
-  .comp-letter { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 700; color: #fff; flex-shrink: 0; }
-  .comp-name-cn { font-size: 16px; font-weight: 700; color: var(--text-dark); }
-  .comp-def { font-size: 13px; color: #666; line-height: 1.75; border-top: 1px solid #eee; padding-top: 14px; margin-top: 4px; }
-  .comp-ai { font-size: 15px; color: #444; line-height: 1.9; margin-bottom: 16px; }
-  .comp-ai strong { color: var(--text-dark); font-weight: 600; }
-  .comp-impact { font-size: 15px; font-weight: 600; color: var(--green-dark); line-height: 1.8; padding: 16px 20px; background: var(--green-light); border-radius: 8px; }
-
-  .indicators { background: var(--gray-bg); }
-  .ind-inner { max-width: 760px; margin: 0 auto; }
-  .ind-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 36px; }
-  .ind-card { background: #fff; border-radius: 12px; border: 1px solid var(--green-border); padding: 20px 16px; text-align: center; }
-  .ind-letter { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 700; color: #fff; margin: 0 auto 10px; }
-  .ind-label { font-size: 12px; font-weight: 600; color: var(--text-dark); margin-bottom: 4px; }
-  .ind-count { font-size: 22px; font-weight: 700; color: var(--green-mid); margin-bottom: 4px; }
-  .ind-sub { font-size: 11px; color: #aaa; }
-  .ind-method { margin-top: 32px; font-size: 15px; color: #555; line-height: 1.9; text-align: center; }
-  .ind-method strong { color: var(--text-dark); }
-
-  .closing { background: var(--green-dark); }
-  .closing-inner { max-width: 700px; margin: 0 auto; text-align: center; }
-  .closing-body { font-size: 17px; color: rgba(255,255,255,0.85); line-height: 1.9; margin-bottom: 28px; }
-  .closing-body strong { color: #A8D970; font-weight: 600; }
-  .closing-tagline { font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 8px; line-height: 1.5; }
-  .closing-tagline em { font-style: italic; color: #A8D970; }
-  .closing-sub { font-size: 14px; color: rgba(255,255,255,0.5); margin-bottom: 40px; line-height: 1.7; }
-  .closing-divider { height: 1px; background: rgba(255,255,255,0.12); margin: 0 auto 36px; max-width: 300px; }
-  .closing-cta-label { font-size: 16px; color: rgba(255,255,255,0.7); margin-bottom: 20px; line-height: 1.7; }
-  .btn-cta { display: inline-block; background: #A8D970; color: var(--green-dark); padding: 14px 32px; border-radius: 8px; font-size: 15px; font-weight: 700; text-decoration: none; }
-  .btn-cta:hover { background: #C0DD97; }
-  .footer-line { background: #1a3a06; padding: 20px 40px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.25); letter-spacing: 0.1em; }
-
-  @media (max-width: 720px) {
-    .container { padding: 0 20px; }
-    .comp-item { grid-template-columns: 1fr; gap: 20px; }
-    .comp-left { padding-right: 0; border-bottom: 1px solid #eee; padding-bottom: 20px; }
-    .ind-grid { grid-template-columns: repeat(2, 1fr); }
-    .hero-headline { font-size: 24px; }
-  }
-  @media (max-width: 480px) {
-    .ind-grid { grid-template-columns: 1fr; }
-  }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The GrowMate HEART framework: Human Collaboration, Expression and Communication, Action and Problem Solving, Resilience and Self-management, and Thinking and Creativity.">
+  <title>About HEART™ | GrowMate™</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-
-<nav>
-  <div class="nav-inner">
-    <a href="index.html" class="nav-brand" aria-label="GrowMate home">
-      <img src="GrowMate.png" alt="GrowMate — Lead the AI Era with HEART" class="brand-logo">
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="GrowMate home">
+      <img src="GrowMate.png" alt="GrowMate, Lead the AI Era with HEART">
     </a>
-
     <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
-
-    <div class="nav-links">
-      <a href="about.html" class="nav-text">About Us</a>
-      <a href="heart.html" class="nav-text">About HEART™</a>
-      <a href="program.html" class="nav-text">The Program</a>
-      <a href="apply.html" class="btn-apply">Apply Now →</a>
-      <a href="#" class="btn-member" title="Membership section coming next">Member Login</a>
-    </div>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="about.html">About Us</a>
+      <a href="heart.html">About HEART™</a>
+      <a href="program.html">Our Program</a>
+      <a class="nav-apply" href="apply.html">Apply Now</a>
+      <a class="member-link" href="#" aria-disabled="true" title="Membership section coming next">Member Login</a>
+    </nav>
   </div>
-</nav>
-
-
-<section class="hero">
-  <div class="container">
-    <div class="hero-eyebrow">About HEART™</div>
-    <h1 class="hero-headline">
-      HEART™ is GrowMate™'s proprietary competency framework —
-      <em>representing the five Human Core Competencies children need most, and that AI is least equipped to replace, in the AI era.</em>
-    </h1>
-  </div>
-</section>
-
-<section class="why">
-  <div class="container">
-    <div class="why-inner">
-      <div class="section-eyebrow" style="text-align:center;">Why These Five</div>
-      <p>HEART™ is built on two of the most respected international frameworks for 21st-century learning: the <strong>OECD Learning Compass 2030</strong> and the <strong>P21 Framework for 21st Century Learning</strong>. It was developed in direct response to what the AI era actually demands of human beings — and represents one of GrowMate™'s core intellectual assets.</p>
-      <p>We started with a question: when AI can memorize everything and execute any standardized task, what does a child actually need?</p>
-      <div class="why-callout">
-        The answer is five capabilities. They cannot be replicated by algorithms. They will not be made obsolete by technology. And they compound across every stage of a child's life — from the classroom to the workplace, from personal relationships to civic life.
-      </div>
+</header>
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">About HEART™</p>
+      <h1>Five human abilities we want children to <span>practice on purpose.</span></h1>
+      <p class="subline">HEART™ is GrowMate™'s competency framework for observing growth across projects, group work, presentations, and reflection.</p>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="competencies">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-eyebrow">HEART™ Five Human Core Competencies</div>
-      <h2>Each one irreplaceable. All five essential.</h2>
+  <section class="text-section">
+    <div class="narrow center prose">
+      <p class="section-kicker">Why These Five</p>
+      <h2 class="section-heading">A practical framework for human development</h2>
+      <p>HEART™ draws on the OECD Learning Compass 2030 and the P21 Framework for 21st Century Learning. We use those ideas as a starting point, then organize them around the behaviors we can actually observe in GrowMate™ projects.</p>
+      <p>The question behind the framework is simple: when AI can handle more information and more routine tasks, what do children still need to practice themselves?</p>
+      <div class="callout" style="text-align:left">Our answer is five areas: collaboration, communication, action, resilience, and thinking. Each area is broken into six development indicators, for 30 indicators in total.</div>
     </div>
-    <div class="comp-list">
-      <div class="comp-item">
-        <div class="comp-left">
-          <div class="comp-badge-row"><div class="comp-letter" style="background:#2E86C1;">H</div><div><div class="comp-name-cn">Human Collaboration</div></div></div>
-          <div class="comp-def">Actively building connections, taking on roles, reading others, navigating disagreement, holding collective responsibility, and moving the team forward.</div>
-        </div>
-        <div>
-          <div class="comp-ai">AI can handle your information and organize your meeting notes — but it cannot make your teammates trust you, and it cannot hold a team together when things get hard.</div>
-          <div class="comp-impact">Children who can sense others, work through conflict, and move forward together possess a competitive edge AI will never be able to replicate.</div>
-        </div>
-      </div>
+  </section>
 
-      <div class="comp-item">
-        <div class="comp-left">
-          <div class="comp-badge-row"><div class="comp-letter" style="background:#E8871A;">E</div><div><div class="comp-name-cn">Expression & Communication</div></div></div>
-          <div class="comp-def">Expressing ideas clearly, understanding others accurately, seeking clarification proactively, responding effectively, and adjusting communication style for different people and contexts.</div>
+  <section>
+    <div class="container">
+      <div class="section-head"><p class="section-kicker">HEART™</p><h2 class="section-heading">The five competencies</h2></div>
+      <div class="detail-list">
+        <div class="detail-row">
+          <div class="detail-left"><div class="detail-title"><div class="detail-badge" style="background:#2E86C1">H</div><h3>Human Collaboration</h3></div><p>Work with people, not just beside them.</p></div>
+          <div class="detail-body"><p>Build connections, take on a role, read the group, work through disagreement, and take responsibility for shared progress.</p><p class="detail-highlight">What we look for: trust-building, participation, perspective-taking, conflict navigation, and shared responsibility.</p></div>
         </div>
-        <div>
-          <div class="comp-ai">AI can polish your writing and generate your content — but it cannot give you a point of view, and it cannot move an audience the way a human voice can.</div>
-          <div class="comp-impact">Children who communicate with clarity and intention don't just present themselves better — they influence people and change the world around them.</div>
+        <div class="detail-row">
+          <div class="detail-left"><div class="detail-title"><div class="detail-badge" style="background:#E8871A">E</div><h3>Expression & Communication</h3></div><p>Make an idea understandable.</p></div>
+          <div class="detail-body"><p>Express ideas clearly, understand other people, ask when something is unclear, respond well, and adjust to the audience or situation.</p><p class="detail-highlight">What we look for: clarity, listening, questions, response, and audience awareness.</p></div>
         </div>
-      </div>
-
-      <div class="comp-item">
-        <div class="comp-left">
-          <div class="comp-badge-row"><div class="comp-letter" style="background:#1D9E75;">A</div><div><div class="comp-name-cn">Action & Problem Solving</div></div></div>
-          <div class="comp-def">Turning goals into action: initiating, defining the problem, planning a path, following through, iterating, and taking ownership of outcomes.</div>
+        <div class="detail-row">
+          <div class="detail-left"><div class="detail-title"><div class="detail-badge" style="background:#1D9E75">A</div><h3>Action & Problem Solving</h3></div><p>Turn an idea into progress.</p></div>
+          <div class="detail-body"><p>Start, define the problem, plan a path, follow through, adjust when needed, and own the result.</p><p class="detail-highlight">What we look for: initiative, problem definition, planning, follow-through, iteration, and ownership.</p></div>
         </div>
-        <div>
-          <div class="comp-ai">AI can generate options and analyze scenarios — but it cannot make the real decision, and it cannot be held responsible for what happens next.</div>
-          <div class="comp-impact">Children who can identify what actually matters, take initiative, and own their results are the ones who use AI as a tool — never the other way around.</div>
+        <div class="detail-row">
+          <div class="detail-left"><div class="detail-title"><div class="detail-badge" style="background:#7B5EA7">R</div><h3>Resilience & Self-management</h3></div><p>Keep working when things get uncomfortable.</p></div>
+          <div class="detail-body"><p>Manage emotions under pressure, stay steady through difficulty, recover from setbacks, and build habits that support independent work.</p><p class="detail-highlight">What we look for: regulation, persistence, recovery, focus, and growing independence.</p></div>
         </div>
-      </div>
-
-      <div class="comp-item">
-        <div class="comp-left">
-          <div class="comp-badge-row"><div class="comp-letter" style="background:#7B5EA7;">R</div><div><div class="comp-name-cn">Resilience & Self-management</div></div></div>
-          <div class="comp-def">Regulating emotions under pressure, maintaining stability through difficulty, recovering from setbacks, and developing increasingly mature self-management habits.</div>
-        </div>
-        <div>
-          <div class="comp-ai">AI can manage your calendar and set your reminders — but it cannot keep you clear-headed under pressure, and it cannot get back up after you fall.</div>
-          <div class="comp-impact">Children who stay grounded in uncertainty and recover from failure turn every wave of technological change into opportunity — not threat.</div>
-        </div>
-      </div>
-
-      <div class="comp-item">
-        <div class="comp-left">
-          <div class="comp-badge-row"><div class="comp-letter" style="background:#E05C3A;">T</div><div><div class="comp-name-cn">Thinking & Creativity</div></div></div>
-          <div class="comp-def">Asking meaningful questions, making reasoned judgments, applying logical thinking, shifting perspectives, generating original ideas, and synthesizing different viewpoints into something new.</div>
-        </div>
-        <div>
-          <div class="comp-ai">AI can give you answers — but it cannot ask the questions that matter, and it cannot decide what is worth pursuing in the first place.</div>
-          <div class="comp-impact">Children who think independently, judge critically, and solve problems creatively are the ones who truly direct AI — knowing what to ask, what to trust, and what to push beyond.</div>
+        <div class="detail-row">
+          <div class="detail-left"><div class="detail-title"><div class="detail-badge" style="background:#E05C3A">T</div><h3>Thinking & Creativity</h3></div><p>Ask better questions and make better judgments.</p></div>
+          <div class="detail-body"><p>Ask useful questions, reason from evidence, test assumptions, look from another angle, and combine ideas into something new.</p><p class="detail-highlight">What we look for: questioning, evidence, logic, perspective shifts, originality, and synthesis.</p></div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="indicators">
-  <div class="container">
-    <div class="ind-inner">
-      <div class="section-header">
-        <div class="section-eyebrow">30 Development Indicators</div>
-        <h2>Making the invisible work of soft skills visible and concrete.</h2>
+  <section class="text-section">
+    <div class="narrow center">
+      <p class="section-kicker">30 Development Indicators</p>
+      <h2 class="section-heading">Soft skills need concrete evidence</h2>
+      <p class="section-intro">Each HEART™ area has six development indicators. We record specific behavior instead of giving a vague score.</p>
+      <div class="indicator-grid">
+        <div class="simple-card center"><div class="detail-badge" style="background:#2E86C1;margin:0 auto 8px">H</div><h3>6</h3><p>indicators</p></div>
+        <div class="simple-card center"><div class="detail-badge" style="background:#E8871A;margin:0 auto 8px">E</div><h3>6</h3><p>indicators</p></div>
+        <div class="simple-card center"><div class="detail-badge" style="background:#1D9E75;margin:0 auto 8px">A</div><h3>6</h3><p>indicators</p></div>
+        <div class="simple-card center"><div class="detail-badge" style="background:#7B5EA7;margin:0 auto 8px">R</div><h3>6</h3><p>indicators</p></div>
+        <div class="simple-card center"><div class="detail-badge" style="background:#E05C3A;margin:0 auto 8px">T</div><h3>6</h3><p>indicators</p></div>
       </div>
-      <div class="ind-grid">
-        <div class="ind-card"><div class="ind-letter" style="background:#2E86C1;">H</div><div class="ind-label">Human Collaboration</div><div class="ind-count">6</div><div class="ind-sub">indicators</div></div>
-        <div class="ind-card"><div class="ind-letter" style="background:#E8871A;">E</div><div class="ind-label">Expression & Communication</div><div class="ind-count">6</div><div class="ind-sub">indicators</div></div>
-        <div class="ind-card"><div class="ind-letter" style="background:#1D9E75;">A</div><div class="ind-label">Action & Problem Solving</div><div class="ind-count">6</div><div class="ind-sub">indicators</div></div>
-        <div class="ind-card"><div class="ind-letter" style="background:#7B5EA7;">R</div><div class="ind-label">Resilience & Self-management</div><div class="ind-count">6</div><div class="ind-sub">indicators</div></div>
-        <div class="ind-card"><div class="ind-letter" style="background:#E05C3A;">T</div><div class="ind-label">Thinking & Creativity</div><div class="ind-count">6</div><div class="ind-sub">indicators</div></div>
-      </div>
-      <div class="ind-method">
-        Assessment is grounded in <strong>behavioral observation</strong>, triangulated across three perspectives: <strong>mentor observation, parent documentation, and child self-reflection</strong>. The result is a growth record that is concrete, credible, and genuinely meaningful — not a test score, but a real picture of how a child is developing.
-      </div>
+      <p class="section-intro" style="margin-top:24px">Evidence comes from mentor observation, parent documentation, and the child's own reflection. The goal is a useful growth record, not another test.</p>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="closing">
-  <div class="container">
-    <div class="closing-inner">
-      <div class="closing-body">
-        Individually, each of these five capabilities makes a child more grounded, more capable, and more ready for what comes next. Together, they form something more powerful: a child's complete <strong>soft skills</strong> foundation — one that goes far beyond surviving the AI era. To lead it. To define it. To make it serve what actually matters.
-      </div>
-      <div class="closing-tagline">This is what <em>Lead the AI Era with HEART™</em> means.</div>
-      <div class="closing-sub">Not fear of being replaced — but the confidence to stand above it.</div>
-      <div class="closing-divider"></div>
-      <div class="closing-cta-label">HEART™ is the destination. The GrowMate™ HEART PBL Program is how children get there.</div>
-      <a href="program.html" class="btn-cta">Explore Our Program →</a>
+  <section class="cta">
+    <div class="container">
+      <p class="section-kicker">From Framework to Practice</p>
+      <h2>HEART™ tells us what to look for. The program gives children a place to practice it.</h2>
+      <p>See how the GrowLoop™ cycle, small groups, projects, and mentors work together each month.</p>
+      <a class="button button-accent" href="program.html">Explore Our Program</a>
     </div>
-  </div>
-</section>
-
-<div class="footer-line">GROWMATE™ · LEAD THE AI ERA WITH HEART™</div>
-
-
-<script>
-  const navToggle = document.querySelector('.nav-toggle');
-  const navLinks = document.querySelector('.nav-links');
-
-  if (navToggle && navLinks) {
-    navToggle.addEventListener('click', () => {
-      const isOpen = navLinks.classList.toggle('open');
-      navToggle.setAttribute('aria-expanded', String(isOpen));
-    });
-
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-  }
-</script>
-
+  </section>
+</main>
+<footer class="site-footer">© 2026 GrowMate™ · Lead the AI Era with HEART™</footer>
+<script src="site.js"></script>
 </body>
 </html>
