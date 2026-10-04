@@ -1,12 +1,21 @@
-# GrowMate launch files
+# GrowMate Website
 
-Upload all files in this folder to the repository root.
+Public website for GrowMate™ EdTech Inc.
 
-Important:
-- `GrowMate.png` is the logo used in every header.
-- Every Apply Now button links to `apply.html`.
-- When the Google Form URL is ready, edit only `apply.html` and set `FORM_URL`.
-- Home-page Learn More links to `#problem`.
-- About Us has a Learn More button linking to `heart.html`.
-- The placeholder parent-testimonial section has been removed from `index.html`.
-- `Member Login` is still a placeholder (`#`) because the Membership section has not been built yet.
+Website:
+https://growmate.ca
+
+Member Portal:
+https://members.growmate.ca
+
+## Main Pages
+
+- `index.html` — Home
+- `about.html` — About Us
+- `heart.html` — HEART Framework
+- `program.html` — Our Program
+
+Member Login links to:
+
+https://members.growmate.ca
+
