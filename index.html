@@ -1,151 +1,240 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="GrowMate is an after-school Human Skills PBL program for ages 6–17, where teams of four take on interdisciplinary real-world projects through GrowLoop™ and HEART™.">
-  <title>GrowMate™ | Lead the AI Era with HEART™</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GrowMate® Human Skills PBL</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="GrowMate® is after-school project-based learning for ages 10–13. Children practise the skills schools value through real projects in small groups, and parents see the growth.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
 <header class="site-header">
-  <div class="container nav">
+  <div class="wrap nav">
     <a class="brand" href="index.html" aria-label="GrowMate home">
-      <img src="GrowMate.png" alt="GrowMate, Lead the AI Era with HEART">
+      <img class="logo-light" src="images/logo-header.svg" alt="GrowMate®">
+      <img class="logo-dark" src="images/logo-header-dark.svg" alt="GrowMate®">
     </a>
-    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
-    <nav class="nav-links" aria-label="Primary navigation">
-      <a href="about.html">About Us</a>
-      <a href="heart.html">About HEART™</a>
-      <a href="program.html">Our Program</a>
-      <a class="nav-apply" href="https://forms.gle/WHR9NqtynUmUbWVZ9">Apply Now</a>
-      <a class="member-link" href="https://members.growmate.ca">Member Login</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <nav class="nav-links" id="nav-links" aria-label="Main">
+      <a href="how-it-works.html">How It Works</a>
+      <a href="about.html">About</a>
+      <a class="lang" href="zh/index.html" lang="zh">中文</a>
+      <a class="login" href="MEMBER-LOGIN-URL">Member Login</a>
+      <a class="btn btn-primary" href="https://forms.gle/WHR9NqtynUmUbWVZ9">Apply Now</a>
     </nav>
   </div>
 </header>
+
 <main>
-  <section class="home-hero">
-    <div class="container">
-      <p class="eyebrow">MASTER AI. STAY HUMAN.</p>
-      <h1>The Power to Define the Future</h1>
-      <p>GrowMate is an after-school Human Skills PBL program for ages 6–17. In teams of four, children take on interdisciplinary real-world projects through GrowLoop™, while mentors use HEART™ to help them grow in how they work with others, communicate ideas, turn plans into action, manage themselves, and think independently. What mentors observe in each project helps guide what each child practices next.</p>
-      <div class="button-row">
-        <a class="button button-primary" href="https://forms.gle/WHR9NqtynUmUbWVZ9">Apply Now · Limited Spots</a>
-        <a class="button button-secondary" href="#problem">Learn More</a>
+
+  <!-- 1. Hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="slogan">MASTER AI. STAY HUMAN.</p>
+        <h1>The skills schools value <span>are the skills the AI era needs most.</span></h1>
+        <p class="lead">GrowMate® is an after-school program that complements school education. Through interdisciplinary real-world projects, your child gets purposeful practice in the core competencies and subject skills of the BC curriculum, and you can clearly see the growth.</p>
+        <ul class="facts">
+          <li><strong>Ages 10–13</strong> now enrolling</li>
+          <li>Small groups of about 4</li>
+          <li>One real-world project a month</li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://forms.gle/WHR9NqtynUmUbWVZ9">Apply Now</a>
+          <a class="btn btn-ghost" href="#how">See how a month works</a>
+        </div>
+      </div>
+      <div class="badge-ring" aria-hidden="true">
+        <div class="tree"><img src="images/logo-mark-lg.png" alt=""></div>
+        <img class="b b1" src="images/heart-h.png" alt="">
+        <img class="b b2" src="images/heart-e.png" alt="">
+        <img class="b b3" src="images/heart-a.png" alt="">
+        <img class="b b4" src="images/heart-r.png" alt="">
+        <img class="b b5" src="images/heart-t.png" alt="">
       </div>
     </div>
   </section>
 
-  <section class="text-section" id="problem">
-    <div class="narrow center prose">
-      <p class="section-kicker">The Problem We Solve</p>
-      <h2 class="section-heading">Technology changes fast. Human ability matters for longer.</h2>
-      <p>AI tools will keep changing. The technical skill that feels urgent today may look very different in a few years.</p>
-      <p>What lasts longer is a child's ability to think clearly, work with other people, communicate an idea, act on a plan, and recover when something does not work.</p>
-      <p><strong>GrowMate™ gives children repeated practice with those abilities through real projects and real interaction.</strong></p>
+  <!-- 2. Why it matters -->
+  <section class="band band-tint">
+    <div class="wrap">
+      <p class="kicker">Competencies that matter in school and life</p>
+      <h2 class="section-title">Valued in class, but rarely practised on purpose.</h2>
+      <div class="why-grid">
+        <div class="why-copy lead">
+          <p>Today’s classrooms care about more than what students know. They also look at how students think, communicate and work with others.</p>
+          <p>Yet a busy classroom leaves limited time for focused practice and individual feedback. And the stronger AI becomes, the more these human skills matter. GrowMate® gives them focused, regular practice.</p>
+        </div>
+        <aside class="stat">
+          <div class="num">3×<small>a year, at least</small></div>
+          <p>BC students reflect on their Core Competencies and set personal goals in their school reports, at least three times a year.</p>
+          <a class="src" href="https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/legislation-policy/public-schools/student-reporting" target="_blank" rel="noopener">Source: BC K–12 Student Reporting Policy ↗</a>
+        </aside>
+      </div>
     </div>
   </section>
 
-  <section>
-    <div class="container">
-      <div class="section-head">
-        <p class="section-kicker">The HEART™ Framework</p>
-        <h2 class="section-heading">Five Human Core Competencies</h2>
-        <p class="section-intro">HEART™ gives us a simple way to name, observe, and discuss the abilities children are practicing.</p>
+  <!-- 3. What your child gains -->
+  <section class="band">
+    <div class="wrap">
+      <p class="kicker">What your child gains</p>
+      <h2 class="section-title">Three things your child takes from every month.</h2>
+      <div class="gains">
+        <article class="gain">
+          <img src="images/heart-tree.png" alt="">
+          <span class="tag">HEART™</span>
+          <h3>Core human skills</h3>
+          <p>Five HEART™ competencies, practised in every project.</p>
+          <p class="at-school"><b>At school:</b> speaking up in class, working well in groups, sticking with hard problems.</p>
+        </article>
+        <article class="gain">
+          <img src="images/explorer.png" alt="">
+          <span class="tag">GrowLoop™</span>
+          <h3>The six-step growth cycle</h3>
+          <p>Inquire, design, create, revise, present and reflect, repeated every month until it becomes a habit.</p>
+          <p class="at-school"><b>At school:</b> knowing how to start, plan and improve inquiry projects and presentations.</p>
+        </article>
+        <article class="gain">
+          <img src="images/sprout.png" alt="">
+          <span class="tag">Growth records</span>
+          <h3>Growth you can see</h3>
+          <p>Watch your child present finished work at every monthly Showcase, keep a portfolio of their projects, and read HEART™ Growth Reports with specific examples.</p>
+          <p class="at-school"><b>At school:</b> more confident presentations and group work, and real examples to bring to self-assessment and parent-teacher conversations.</p>
+        </article>
       </div>
+    </div>
+  </section>
+
+  <!-- 4. HEART -->
+  <section class="band band-tint" id="heart">
+    <div class="wrap">
+      <p class="kicker">HEART™ · What we develop</p>
+      <h2 class="section-title">Five competencies we help children build.</h2>
       <div class="heart-grid">
-        <article class="heart-card">
-          <div class="heart-top" style="background:#E8F4FD"><div class="heart-letter" style="background:#2E86C1">H</div></div>
-          <div class="heart-body"><p class="heart-name">Human Collaboration</p><p class="heart-desc">Build trust, take a role, listen to others, work through disagreement, and help a group move forward.</p><p class="heart-note" style="color:#1A5276">AI can support a team. It cannot build human trust for you.</p></div>
-        </article>
-        <article class="heart-card">
-          <div class="heart-top" style="background:#FEF3E2"><div class="heart-letter" style="background:#E8871A">E</div></div>
-          <div class="heart-body"><p class="heart-name">Expression & Communication</p><p class="heart-desc">Explain an idea clearly, understand other people, ask for clarification, and adapt to the audience.</p><p class="heart-note" style="color:#7D4E00">AI can polish words. A child still needs a point of view and a voice.</p></div>
-        </article>
-        <article class="heart-card">
-          <div class="heart-top" style="background:#E1F5EE"><div class="heart-letter" style="background:#1D9E75">A</div></div>
-          <div class="heart-body"><p class="heart-name">Action & Problem Solving</p><p class="heart-desc">Define the problem, make a plan, start, adjust when needed, and take responsibility for the result.</p><p class="heart-note" style="color:#0F6E56">AI can suggest options. People still have to decide and act.</p></div>
-        </article>
-        <article class="heart-card">
-          <div class="heart-top" style="background:#F0EEFF"><div class="heart-letter" style="background:#7B5EA7">R</div></div>
-          <div class="heart-body"><p class="heart-name">Resilience & Self-management</p><p class="heart-desc">Manage emotions, stay steady under pressure, recover from setbacks, and build better habits.</p><p class="heart-note" style="color:#4A2D82">A reminder app can prompt you. It cannot do the hard part of recovering for you.</p></div>
-        </article>
-        <article class="heart-card">
-          <div class="heart-top" style="background:#FFF0ED"><div class="heart-letter" style="background:#E05C3A">T</div></div>
-          <div class="heart-body"><p class="heart-name">Thinking & Creativity</p><p class="heart-desc">Ask useful questions, judge evidence, shift perspective, and combine ideas in new ways.</p><p class="heart-note" style="color:#8B2500">AI can produce answers. Children still need to judge what is worth asking and trusting.</p></div>
-        </article>
+        <article class="hc h"><img src="images/heart-h.png" alt=""><h3>Human Collaboration</h3><p>Take a role, listen, work through disagreement and move the group forward.</p></article>
+        <article class="hc e"><img src="images/heart-e.png" alt=""><h3>Expression &amp; Communication</h3><p>Explain ideas clearly and adjust to the audience.</p></article>
+        <article class="hc a"><img src="images/heart-a.png" alt=""><h3>Action &amp; Problem Solving</h3><p>Make a plan, get started, adjust and follow through.</p></article>
+        <article class="hc r"><img src="images/heart-r.png" alt=""><h3>Resilience &amp; Self-management</h3><p>Stay steady, bounce back from setbacks and manage time and effort.</p></article>
+        <article class="hc t"><img src="images/heart-t.png" alt=""><h3>Thinking &amp; Creativity</h3><p>Ask good questions, weigh evidence and combine ideas in new ways.</p></article>
       </div>
-      <div class="heart-summary">Five competencies · 20 development indicators · observed through real behavior, not a test score</div>
-      <p class="small-note"><a href="heart.html">Read more about HEART™</a></p>
+      <p class="note"><strong>Five competencies, 20 behaviour indicators.</strong> They guide goal setting, mentor observation, project feedback and growth records.</p>
     </div>
   </section>
 
-  <section class="loop-section">
-    <div class="container">
-      <div class="section-head">
-        <p class="section-kicker">How It Works</p>
-        <h2 class="section-heading">The GrowLoop™ Project Growth Cycle</h2>
+  <!-- 5. How a month works -->
+  <section class="band" id="how">
+    <div class="wrap">
+      <p class="kicker">Real-world learning. Real skill practice.</p>
+      <h2 class="section-title">How a month works: four online sessions, one in-person Showcase.</h2>
+      <p class="lead">Small groups, active participation. Each month a group of about four peers takes one real-world project from first question to finished work, guided by a mentor.</p>
+      <ol class="month">
+        <li><p class="when">Week 1</p><p class="steps">Inquire</p><p class="where">Online · small group</p></li>
+        <li><p class="when">Week 2</p><p class="steps">Design · Create</p><p class="where">Online · small group</p></li>
+        <li><p class="when">Week 3</p><p class="steps">Create · Revise</p><p class="where">Online · small group</p></li>
+        <li><p class="when">Week 4</p><p class="steps">Revise</p><p class="where">Online · small group</p></li>
+        <li class="show"><p class="when">Showcase</p><p class="steps">Present · Reflect</p><p class="where">In person · with families</p></li>
+      </ol>
+      <p class="loop-line" aria-label="The six GrowLoop steps">
+        <span class="lbl">GrowLoop™ six-step cycle</span>
+        <span class="s">Inquire</span><span class="arrow" aria-hidden="true">→</span>
+        <span class="s">Design</span><span class="arrow" aria-hidden="true">→</span>
+        <span class="s">Create</span><span class="arrow" aria-hidden="true">→</span>
+        <span class="s">Revise</span><span class="arrow" aria-hidden="true">→</span>
+        <span class="s">Present</span><span class="arrow" aria-hidden="true">→</span>
+        <span class="s">Reflect</span>
+      </p>
+      <div class="reflect">
+        <img src="images/seed.png" alt="">
+        <div>
+          <h3>Every project ends with Reflect.</h3>
+          <p>Children look back on what they did, name how they have grown and set a goal for next month. It is the same self-reflection and goal-setting habit BC schools ask of students, practised every month with a mentor’s feedback.</p>
+        </div>
       </div>
-      <div class="loop-grid">
-        <div class="loop-step"><div class="loop-number">1</div><p class="loop-name">Inquire</p><p class="loop-desc">Start with a real question and look for evidence.</p></div>
-        <div class="loop-step"><div class="loop-number">2</div><p class="loop-name">Design</p><p class="loop-desc">Choose an approach and make a workable plan.</p></div>
-        <div class="loop-step"><div class="loop-number">3</div><p class="loop-name">Create</p><p class="loop-desc">Make something and learn from what happens.</p></div>
-        <div class="loop-step"><div class="loop-number">4</div><p class="loop-name">Revise</p><p class="loop-desc">Get useful feedback and improve the work.</p></div>
-        <div class="loop-step"><div class="loop-number">5</div><p class="loop-name">Present</p><p class="loop-desc">Explain the work to a real audience and take questions.</p></div>
-        <div class="loop-step"><div class="loop-number">6</div><p class="loop-name">Reflect</p><p class="loop-desc">Name what worked, what was hard, and what changed.</p></div>
-      </div>
-      <div class="loop-cadence"><strong>One project each month</strong> · Small peer group · Monthly showcase</div>
     </div>
   </section>
 
-  <section>
-    <div class="container">
-      <div class="section-head"><p class="section-kicker">What Makes Us Different</p><h2 class="section-heading">GrowMate™ and other after-school programs</h2></div>
-      <div class="table-wrap">
+  <!-- 6. Compared with tutoring -->
+  <section class="band band-tint">
+    <div class="wrap">
+      <p class="kicker">How we’re different</p>
+      <h2 class="section-title">Like tutoring, but for the skills behind every subject.</h2>
+      <div class="compare-wrap">
         <table class="compare">
-          <thead><tr><th></th><th class="gm">GrowMate™</th><th>Academic Tutoring</th><th>Coding / STEAM</th><th>Extracurriculars</th></tr></thead>
+          <thead><tr><th scope="col"></th><th scope="col">Academic tutoring</th><th scope="col" class="gm">GrowMate®</th></tr></thead>
           <tbody>
-            <tr><td class="label">Main focus</td><td class="gm">Human core competencies</td><td>Subject performance</td><td>Technical skills</td><td>Interest-specific skills</td></tr>
-            <tr><td class="label">How children work</td><td class="gm">Real projects and small groups</td><td>Lessons and practice</td><td>Skill training</td><td>Practice and performance</td></tr>
-            <tr><td class="label">How growth is seen</td><td class="gm">Behavioral observation and growth reports</td><td>Grades and tests</td><td>Projects and assessments</td><td>Performances or competitions</td></tr>
+            <tr><td class="lbl">Focus</td><td class="other">What to know: subject content</td><td class="gm">What to do with it: asking questions, planning, solving problems, communicating and working with others</td></tr>
+            <tr><td class="lbl">How children learn</td><td class="other">Lessons and practice questions</td><td class="gm">Interdisciplinary, real-world projects across eight domains, in small groups with a mentor</td></tr>
+            <tr><td class="lbl">Where it shows at school</td><td class="other">Tests and quizzes</td><td class="gm">More confidence in class discussions, group work, presentations and inquiry assignments</td></tr>
           </tbody>
         </table>
       </div>
+      <p class="note">Every BC subject includes curricular competencies, the “doing” part of learning: questioning, planning, reasoning and communicating. These are the skills GrowMate® practises in every project.</p>
+      <p class="punch"><span>Tutoring helps children answer questions.</span> GrowMate helps them turn ideas into action.</p>
     </div>
   </section>
 
-  <section class="text-section">
-    <div class="container">
-      <div class="section-head"><p class="section-kicker">Three Pillars</p><h2 class="section-heading">What the program is built around</h2></div>
-      <div class="three-grid">
-        <article class="simple-card"><div class="icon-box">🔨</div><h3>Real Projects</h3><p>Each month begins with a real driving question. Children investigate, make choices, build something, revise it, present it, and reflect.</p></article>
-        <article class="simple-card"><div class="icon-box">👥</div><h3>Peer Groups</h3><p>Each child works with a small group of same-age peers. They share progress, give feedback, and learn how to work with other people.</p></article>
-        <article class="simple-card"><div class="icon-box">🧭</div><h3>Role Model Mentors</h3><p>Mentors guide the process without doing the work for the child. They ask questions, notice behavior, and help children reflect.</p></article>
+  <!-- 7. What parents say: unhide (remove the hidden attribute) once real quotes are approved -->
+  <section class="band" id="parents" hidden>
+    <div class="wrap">
+      <p class="kicker">What parents say</p>
+      <h2 class="section-title">From our first families.</h2>
+      <div class="quotes">
+        <!-- Quote card template:
+        <figure class="gain"><blockquote>“Quote text.”</blockquote><figcaption>Parent of a Builder, Vancouver</figcaption></figure>
+        -->
       </div>
     </div>
   </section>
 
-  <section class="levels-section">
-    <div class="container">
-      <div class="section-head"><p class="section-kicker">Who It's For</p><h2 class="section-heading">Three Learner Levels</h2></div>
-      <div class="level-grid">
-        <article class="level-card"><div class="level-icon">🔭</div><h3>Explorers</h3><p class="level-age">Ages 6-9</p><p>Hands-on projects with clear structure, familiar topics, and room for curiosity.</p></article>
-        <article class="level-card"><div class="level-icon">🏗</div><h3>Builders</h3><p class="level-age">Ages 10-13</p><p>Projects reach into the community and give children more ownership, feedback, and responsibility.</p></article>
-        <article class="level-card"><div class="level-icon">🚀</div><h3>Innovators</h3><p class="level-age">Ages 14-17</p><p>Larger questions, more independence, and mentors who step back into an advisory role.</p></article>
+  <!-- 8. Enrol -->
+  <section class="band final">
+    <div class="wrap">
+      <div>
+        <h2>Now enrolling ages 10–13.</h2>
+        <p>Spaces are limited. Apply online, or scan the QR code to chat with us on WeChat.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://forms.gle/WHR9NqtynUmUbWVZ9">Apply Now</a>
+          <a class="btn btn-ghost" href="how-it-works.html">How It Works</a>
+        </div>
+        <div class="qr"><img src="images/wechat-qr.png" alt="GrowMate WeChat QR code"><span>Scan to chat on WeChat</span></div>
       </div>
+      <ul class="levels">
+        <li><span><span class="nm">Explorers</span> <span class="age">· Ages 8–9</span></span><span class="pill soon">Coming soon</span></li>
+        <li><span><span class="nm">Builders</span> <span class="age">· Ages 10–13</span></span><span class="pill open">Now enrolling</span></li>
+        <li><span><span class="nm">Innovators</span> <span class="age">· Ages 14–17</span></span><span class="pill soon">Coming soon</span></li>
+      </ul>
     </div>
   </section>
 
-  <section class="cta">
-    <div class="container">
-      <p class="section-kicker">Phase 1 · Now Enrolling</p>
-      <h2>32 children. 8 groups. Small by design.</h2>
-      <p>We are starting with a limited first cohort so the groups stay small and the program can be closely supported.</p>
-      <a class="button button-accent" href="https://forms.gle/WHR9NqtynUmUbWVZ9">Apply Now</a>
-    </div>
-  </section>
 </main>
-<footer class="site-footer">© 2026 GrowMate™ · Lead the AI Era with HEART™</footer>
-<script src="site.js"></script>
+
+<footer>
+  <div class="wrap">
+    <a class="foot-logo" href="index.html" aria-label="GrowMate home"><img class="logo-light" src="images/logo-full.svg" alt="GrowMate® Human Skills PBL for the AI Era"><img class="logo-dark" src="images/logo-full-dark.svg" alt="GrowMate® Human Skills PBL for the AI Era"></a>
+    <span>© 2026 GrowMate® · growmate.ca</span>
+    <b>MASTER AI. STAY HUMAN.</b>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.querySelector('.nav-toggle'), links=document.getElementById('nav-links');
+  if(!btn||!links) return;
+  btn.addEventListener('click',function(){
+    var open=links.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.textContent = open ? 'Close' : 'Menu';
+  });
+  links.addEventListener('click',function(e){ if(e.target.tagName==='A'){ links.classList.remove('open'); btn.setAttribute('aria-expanded','false'); btn.textContent='Menu'; } });
+})();
+</script>
 </body>
 </html>
+
+</body></html>
